@@ -1,5 +1,4 @@
 /** @format */
-import Image from "next/image";
 import Banner from "../ui/product-listing/banner";
 import ProductHighlight from "../ui/product-listing/ProductHighlight";
 import ProductGrid from "../ui/product-listing/ProductGrid";
