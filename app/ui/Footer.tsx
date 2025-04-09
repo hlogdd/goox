@@ -5,7 +5,7 @@ export default function Footer() {
         <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
           {/* Cột 1 - Logo + Thông tin */}
           <div>
-            <h2 className="text-2xl font-bold mb-3 text-white">goox</h2>
+            <h2 className="text-2xl font-bold mb-3 text-white">GOOX</h2>
             <p className="mb-1 text-gray-300">Hot line: <a href="tel:+8421345299752" className="hover:underline">+84 21345299752</a></p>
             <p className="text-gray-300">Email: <a href="mailto:Goox@goox.com" className="hover:underline">Goox@goox.com</a></p>
           </div>
