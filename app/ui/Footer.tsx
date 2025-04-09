@@ -1,7 +1,7 @@
 // app/ui/footer.tsx hoặc components/Footer.tsx
 export default function Footer() {
     return (
-      <footer className="bg-[#09201e] sticky bottom-0 z-50 text-white py-10 px-6 md:px-16">
+      <footer className="bg-[#09201e] text-white py-10 px-6 md:px-16">
         <div className="max-w-screen-xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 text-sm">
           {/* Cột 1 - Logo + Thông tin */}
           <div>
