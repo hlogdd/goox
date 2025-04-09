@@ -1,2 +1,0 @@
-# goox
-GOOX BRANDING PROJECT
