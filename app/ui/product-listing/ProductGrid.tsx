@@ -1,3 +1,5 @@
+/** @format */
+
 "use client";
 
 import { useEffect, useRef, useState } from "react";
@@ -8,6 +10,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 
 import Image from "next/image";
+import Link from "next/link";
 
 type Product = {
   id: number;
@@ -41,10 +44,7 @@ export default function ProductSlider({ title, products }: Props) {
         .map(Number)
         .filter((bp) => bp <= currentWidth)
         .sort((a, b) => b - a)[0];
-      slidesPerView =
-        typeof breakpoints[matched]?.slidesPerView === "number"
-          ? breakpoints[matched].slidesPerView
-          : 1;
+      slidesPerView = typeof breakpoints[matched]?.slidesPerView === "number" ? breakpoints[matched].slidesPerView : 1;
     }
 
     const maxIndex = totalSlides - slidesPerView;
@@ -82,21 +82,15 @@ export default function ProductSlider({ title, products }: Props) {
           calculateProgress(); // Tính lúc đầu
         }}
         onSlideChange={calculateProgress}
-        className="!pb-10"
-      >
+        className="!pb-10">
         {products.map((product) => (
           <SwiperSlide key={product.id}>
             <div className="bg-white rounded-lg border-4 border-transparent hover:border-blue-400 transition">
-              <Image
-                src={product.image}
-                alt={product.name}
-                width={400}
-                height={400}
-                className="w-full h-auto object-cover rounded-md"
-              />
-              <p className="text-center mt-2 text-sm font-medium text-neutral-800">
-                {product.name}
-              </p>
+              <Link href="/product-detail" className="text-2xl font-bold text-gray-900">
+                <Image src={product.image} alt={product.name} width={400} height={400} className="w-full h-auto object-cover rounded-md" />
+              </Link>
+ 
+              <p className="text-center mt-2 text-sm font-medium text-neutral-800">{product.name}</p>
             </div>
           </SwiperSlide>
         ))}
@@ -104,10 +98,7 @@ export default function ProductSlider({ title, products }: Props) {
 
       {/* Custom progress bar */}
       <div className="mt-[-22px] w-lg h-[4px] bg-neutral-200 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-[#00332E] transition-all duration-300"
-          style={{ width: `${progress}%` }}
-        />
+        <div className="h-full bg-[#00332E] transition-all duration-300" style={{ width: `${progress}%` }} />
       </div>
     </section>
   );

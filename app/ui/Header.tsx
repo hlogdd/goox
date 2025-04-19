@@ -4,14 +4,15 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import Image from 'next/image'
 
 const navItems = [
   { label: 'Trang chủ', href: '/' },
-  { label: 'Danh mục sản phẩm', href: '/products' },
+  { label: 'Danh mục sản phẩm', href: '/product-listing' },
   { label: 'Dự án thực tế', href: '/projects' },
   { label: 'Thông tin thương hiệu', href: '/about' },
   { label: 'Liên hệ', href: '/contact' },
-  { label: 'Blog', href: '/blog' },
+  { label: 'Blog', href: '/blogs' },
 ]
 
 export default function Header() {
@@ -21,13 +22,13 @@ export default function Header() {
   const isActive = (href: string) => pathname === href
 
   const linkClass = (href: string) =>
-    `text-sm font-medium ${isActive(href) ? 'text-black font-semibold underline underline-offset-4' : 'text-gray-700 hover:text-black'}`
+    `text-sm ${isActive(href) ? 'active underline underline-offset-4' : 'text-gray-700 '}`
 
   return (
-    <header className="w-full sticky top-0 z-50 bg-neutral-50 border-b border-neutral-200 px-4 md:px-8 py-3">
-      <div className="flex items-center justify-between max-w-screen-xl mx-auto">
+    <header className="header w-full fixed top-0 z-50 ">
+      <div className="flex items-center justify-between w-full mx-auto">
         {/* Left */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="header__link hidden md:flex items-center gap-[40]">
           {navItems.slice(0, 3).map((item) => (
             <Link key={item.href} href={item.href} className={linkClass(item.href)}>
               {item.label}
@@ -37,11 +38,11 @@ export default function Header() {
 
         {/* Logo */}
         <Link href="/" className="text-2xl font-bold text-gray-900">
-          goox
+          <Image src={"/ic_logo.svg"} width={172} height={80} alt='logo'/>
         </Link>
 
         {/* Right */}
-        <nav className="hidden md:flex items-center gap-6">
+        <nav className="header__link hidden md:flex items-center gap-[40]">
           {navItems.slice(3).map((item) => (
             <Link key={item.href} href={item.href} className={linkClass(item.href)}>
               {item.label}

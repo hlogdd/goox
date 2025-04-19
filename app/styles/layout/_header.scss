@@ -1,0 +1,18 @@
+.header {
+    background: #FFFFFF;
+     box-shadow: 0 4px 20px #00000014;
+     padding: 0 104px;
+     margin: 0 auto;
+
+     &__link {
+        &>a {
+            color: #697775 !important;
+            font-weight: 400;
+        }
+
+        &>a.active {
+            color: #061D1B !important;
+            font-weight: 500;
+        }
+     }
+} 

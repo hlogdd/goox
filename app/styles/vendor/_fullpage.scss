@@ -1,0 +1,36 @@
+/**
+ * global.css
+ *
+ * @format
+ */
+
+ .fullpage-wrapper {
+    .section, .fp-overflow {
+        // height: 100%;
+    }
+
+    .section {
+        &__first {
+            // margin-top: 54px;
+            // height: calc(100% - 54px);
+        }
+    }
+ }
+
+.fp {
+    &-table {
+        // display: block !important;
+    }
+}
+
+.fullpage-wrapper {
+//   height: calc(100% - 54px) !important;
+}
+
+body:not(.fp-responsive) .fp-overflow {
+    // max-height: 100% !important;
+}
+
+.fp-is-overflow .fp-overflow.fp-auto-height, .fp-is-overflow .fp-overflow.fp-auto-height-responsive, .fp-is-overflow>.fp-overflow {
+    // overflow-y: unset !important;
+}
