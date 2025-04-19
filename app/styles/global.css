@@ -107,6 +107,10 @@ table {
 }
 
 /** @format */
+.fp-watermark {
+  display: none !important;
+}
+
 .section__container {
   padding: 0 104px;
   margin-top: 70px;
