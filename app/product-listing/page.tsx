@@ -1,3 +1,5 @@
+"use client"
+
 /** @format */
 
 import Container from "../ui/Container";
@@ -5,8 +7,14 @@ import Banner from "../ui/product-listing/banner";
 import ProductHighlight from "../ui/product-listing/ProductHighlight";
 import ProductGrid from "../ui/product-listing/ProductGrid";
 import ContactHome from "../ui/homepage/ContactHome";
+import { removeInlineStylesFromMain } from "../lib/function";
+import { useEffect } from "react";
 
 export default function Page() {
+  useEffect(() => {
+    removeInlineStylesFromMain();
+  }, []);
+
   return (
     <div className="pb-[50px]">
       <Banner />

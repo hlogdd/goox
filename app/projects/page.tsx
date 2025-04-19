@@ -1,32 +1,38 @@
 /** @format */
+"use client";
 
-import React from "react";
+import React, { useEffect } from "react";
 import Banner from "../ui/projects/Banner";
 import Image from "next/image";
 import ContactHome from "../ui/homepage/ContactHome";
+import { removeInlineStylesFromMain } from "../lib/function";
 
 const Page = () => {
+  useEffect(() => {
+    removeInlineStylesFromMain();
+  }, []);
+
   return (
-    <div className="mb-6">
+    <div className="mb-6 clr-primary">
       <Banner />
 
       <section className="bg-white w-full px-8 py-16">
         <div className="section__container">
           {/* Phần đầu: tiêu đề bên trái - mô tả bên phải */}
-          <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
             {/* Cột trái */}
             <div className="space-y-6">
-              <p className="text-sm font-medium text-gray-500 uppercase">Tổng quan dự án</p>
-              <h1 className="text-4xl font-bold text-gray-900 leading-tight">
+              <p className="text-sm font-medium text-gray-500 uppercase m-0">Tổng quan dự án</p>
+              <h1 className="text-[56px] font-medium text-gray-900 leading-[56px]">
                 MIPEC DUPLEX <br /> PENTHOUSE
               </h1>
               <div className="flex gap-8 text-sm text-gray-700">
                 <div>
-                  <p className="font-semibold">Thi công và thiết kế</p>
+                  <p className="font-normal clr-primary">Thi công và thiết kế</p>
                   <p>GOOX</p>
                 </div>
                 <div>
-                  <p className="font-semibold">Năm</p>
+                  <p className="font-medium">Năm</p>
                   <p>2024</p>
                 </div>
               </div>
@@ -42,7 +48,7 @@ const Page = () => {
           </div>
 
           {/* Ảnh bên dưới */}
-          <div className="w-full overflow-hidden ">
+          <div className="w-full overflow-hidden">
             <Image
               src="/projects/project_1.png" // Đổi thành ảnh bạn dùng
               alt="Kitchen"
@@ -56,14 +62,18 @@ const Page = () => {
 
       <section>
         <div className="section__container">
-          <div className="flex gap-4">
-            <div className="item flex flex-col gap-4">
-              <Image src={"/projects/project_2.png"} width={450} height={450} alt="img" />
+          <div className="grid grid-cols-2 gap-[240px] py-[58px] px-[100px]">
+            <div className="item flex flex-col gap-4 max-w-[400] mt-[86px]">
+              <div className=" h-[450] relative">
+                <Image src={"/projects/project_2.png"} fill alt="img" />
+              </div>
               <p>Không gian tiếp khách được mở rộng hoàn toàn về phía vườn sau với hệ cửa kính toàn khung, nơi ánh sáng tràn ngập từ sáng sớm đến cuối ngày.</p>
             </div>
 
-            <div className="item flex flex-col gap-4">
-              <Image src={"/projects/project_3.png"} width={450} height={450} alt="img" />
+            <div className="item flex flex-col gap-4 max-w-[400]">
+              <div className=" h-[450] relative">
+                <Image src={"/projects/project_3.png"} fill alt="img" />
+              </div>
               <p>Khu bếp nối liền phòng ăn là nơi phản chiếu đúng tinh thần “ít mà chất”. Tủ bếp làm từ gỗ sồi sơn mờ, mặt đá trắng vân mây và hệ đèn thả ánh vàng ấm</p>
             </div>
           </div>
@@ -85,19 +95,22 @@ const Page = () => {
           </div>
 
           <div className="flex gap-[30px] py-5">
-            <div className="max-w-[700px] w-full min-h-[540px] relative">
-              <Image src="/projects/project_8.png" fill alt="ảnh 2" className="object-cover" />
-            </div>
-
-            <div className="">
-              <div className="max-w-[400px] w-full min-h-[340px] relative">
-                <Image src="/projects/project_8.png" fill alt="ảnh 2" className="object-cover" />
+            <div className="grid grid-cols-2 gap-[240px] py-[58px] px-[100px]">
+              <div className="item flex flex-col gap-4 max-w-[400] mt-[86px]">
+                <div className=" h-[450] relative">
+                  <Image src={"/projects/project_2.png"} fill alt="img" />
+                </div>
               </div>
 
-              <p>
-                Nó là kết quả của một mối quan hệ sâu sắc giữa gia chủ và đội ngũ thiết kế, giữa nhu cầu sống và chất liệu không gian. Mỗi góc nhỏ đều mang tính chất riêng, nhưng vẫn kết nối hài hòa
-                trong tổng thể.
-              </p>
+              <div className="item flex flex-col gap-4 max-w-[400]">
+                <div className=" h-[450] relative">
+                  <Image src={"/projects/project_3.png"} fill alt="img" />
+                </div>
+                <p>
+                  Nó là kết quả của một mối quan hệ sâu sắc giữa gia chủ và đội ngũ thiết kế, giữa nhu cầu sống và chất liệu không gian. Mỗi góc nhỏ đều mang tính chất riêng, nhưng vẫn kết nối hài hòa
+                  trong tổng thể.
+                </p>
+              </div>
             </div>
           </div>
 

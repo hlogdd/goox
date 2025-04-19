@@ -85,9 +85,9 @@ export default function ProductSlider({ title, products }: Props) {
         className="!pb-10">
         {products.map((product) => (
           <SwiperSlide key={product.id}>
-            <div className="bg-white rounded-lg border-4 border-transparent hover:border-blue-400 transition">
+            <div className="border-transparent hover:border-blue-400 transition">
               <Link href="/product-detail" className="text-2xl font-bold text-gray-900">
-                <Image src={product.image} alt={product.name} width={400} height={400} className="w-full h-auto object-cover rounded-md" />
+                <Image src={product.image} alt={product.name} width={400} height={400} className="w-full h-auto object-cover" />
               </Link>
  
               <p className="text-center mt-2 text-sm font-medium text-neutral-800">{product.name}</p>

@@ -1,14 +1,19 @@
 /** @format */
+"use client"
 
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import ProductList from "../ui/homepage/ProductList";
 import ContactHome from "../ui/homepage/ContactHome";
-
+import { removeInlineStylesFromMain } from "../lib/function";
 const Page = () => {
   const thumbnails = ["/product/thumb1.jpg", "/product/thumb2.jpg", "/product/thumb3.jpg"];
 
   const colors = ["#D2A46B", "#D1D1D1", "#5C5C5C", "#3B4D31", "#243654"];
+
+  useEffect(() => {
+    removeInlineStylesFromMain();
+  }, []);
 
   return (
     <div className="mt-[80px] mb-[50px]">
@@ -56,7 +61,7 @@ const Page = () => {
           </div>
 
           {/* Nút liên hệ */}
-          <button className="bg-black text-white uppercase py-3 px-6 w-fit mt-4 hover:bg-gray-800 transition-all">Liên hệ ngay →</button>
+          <button className="uppercase py-3 px-6 w-fit mt-4 hover:bg-gray-800 transition-all bg-primary">Liên hệ ngay →</button>
         </div>
       </div>
 

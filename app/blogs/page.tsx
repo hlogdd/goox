@@ -5,7 +5,9 @@
 /** @format */
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { removeInlineStylesFromMain } from "../lib/function";
+import Link from "next/link";
 
 const page = () => {
   const blogPosts = [
@@ -120,8 +122,12 @@ const page = () => {
 
   const visiblePosts = showAll ? blogPosts : blogPosts.slice(0, 6);
 
+  useEffect(() => {
+    removeInlineStylesFromMain();
+  }, []);
+
   return (
-    <section className="py-16">
+    <section className="py-16 pt-10">
       <div className="section__container mx-auto px-4">
         {/* Breadcrumb */}
         <div className="text-sm text-gray-500 mb-2">
@@ -129,26 +135,28 @@ const page = () => {
         </div>
 
         {/* Tiêu đề + mô tả */}
-        <h2 className="text-3xl font-bold mb-2">BLOG</h2>
+        <h2 className="text-[56px] font-bold mb-2">BLOG</h2>
         <p className="text-gray-600 mb-8 max-w-3xl">Nơi chúng tôi lưu giữ và chia sẻ những cảm hứng sống tinh tế, từ chất liệu gỗ tự nhiên đến những xu hướng thiết kế đương đại.</p>
 
         {/* Grid bài viết */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {visiblePosts.map((post, index) => (
-            <div key={index} className="flex flex-col gap-3">
+            <Link key={index} href={`/blog-detail`} className="flex flex-col gap-3 cursor-pointer">
               <div className="relative w-full aspect-[4/3] overflow-hidden">
                 <Image src={post.image} alt={post.title} fill className="object-cover" />
               </div>
-              <p className="text-sm text-gray-500">{post.date}</p>
-              <h3 className="text-lg font-semibold">{post.title}</h3>
-            </div>
+              <div>
+                <p className="text-sm text-[#414141]">{post.date}</p>
+                <h3 className="text-md font-medium">{post.title}</h3>
+              </div>
+            </Link>
           ))}
         </div>
 
         {/* Nút xem thêm */}
         {!showAll && (
           <div className="text-center mt-8">
-            <button onClick={() => setShowAll(true)} className="px-6 py-3 bg-black text-white rounded hover:bg-gray-800 transition-all">
+            <button onClick={() => setShowAll(true)} className="px-6 py-3 !font-bold text-white transition-all bg-primary">
               Xem thêm
             </button>
           </div>

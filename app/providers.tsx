@@ -25,7 +25,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
       {!isLoading && (
         <>
           <Header />
-          <div className="main">{children}</div>
+          <main className="main">{children}</main>
           <Footer />
         </>
       )}

@@ -107,11 +107,6 @@ table {
 }
 
 /** @format */
-.main {
-  height: -moz-max-content !important;
-  height: max-content !important;
-}
-
 .section__container {
   padding: 0 104px;
   margin-top: 70px;
@@ -155,6 +150,10 @@ table {
 
 .clr-primary {
   color: #061d1b !important;
+}
+
+.bg-primary {
+  background: #061D1B !important;
 }
 
 /**

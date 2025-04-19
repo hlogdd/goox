@@ -44,7 +44,7 @@ const ContactHome = () => {
           </div>
 
           {/* Nút gửi */}
-          <button type="submit" className="bg-black text-white py-3 px-6 hover:bg-gray-800 transition md:col-span-2">
+          <button type="submit" className="text-white py-3 px-6 hover:bg-gray-800 transition md:col-span-2 bg-primary !font-bold">
             Gửi liên hệ
           </button>
         </form>
