@@ -11,8 +11,16 @@ const Page = () => {
 
   const colors = ["#D2A46B", "#D1D1D1", "#5C5C5C", "#3B4D31", "#243654"];
 
-  useEffect(() => {
+ useEffect(() => {
     removeInlineStylesFromMain();
+
+    // Chạy 1 lần duy nhất khi component được render lần đầu
+    console.log('Chạy một lần duy nhất');
+
+    // Optional: cleanup function
+    return () => {
+      console.log('Component bị unmount');
+    };
   }, []);
 
   return (

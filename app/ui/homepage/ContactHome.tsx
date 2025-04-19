@@ -8,7 +8,7 @@ const ContactHome = () => {
     <div className="section__container flex flex-col md:flex-row gap-12 py-12">
       {/* Phần trái: Tiêu đề + form */}
       <div className="flex-1">
-        <h2 className="text-[56px] font-medium mb-6 uppercase max-w-[400px] leading-[1.1]">Let's work together</h2>
+        <h2 className="text-[56px] font-medium mb-6 uppercase max-w-[400px] leading-[1.1]">Let&apos;s work together</h2>
 
         <form className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Họ tên */}

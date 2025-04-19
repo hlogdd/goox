@@ -9,7 +9,20 @@ import React, { useEffect, useState } from "react";
 import { removeInlineStylesFromMain } from "../lib/function";
 import Link from "next/link";
 
-const page = () => {
+const Page = () => {
+
+   useEffect(() => {
+      removeInlineStylesFromMain();
+  
+      // Chạy 1 lần duy nhất khi component được render lần đầu
+      console.log('Chạy một lần duy nhất');
+  
+      // Optional: cleanup function
+      return () => {
+        console.log('Component bị unmount');
+      };
+    }, []);
+
   const blogPosts = [
     {
       image: "/blogs/01.png",
@@ -122,10 +135,6 @@ const page = () => {
 
   const visiblePosts = showAll ? blogPosts : blogPosts.slice(0, 6);
 
-  useEffect(() => {
-    removeInlineStylesFromMain();
-  }, []);
-
   return (
     <section className="py-16 pt-10">
       <div className="section__container mx-auto px-4">
@@ -166,4 +175,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

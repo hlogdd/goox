@@ -11,8 +11,16 @@ import { removeInlineStylesFromMain } from "../lib/function";
 import { useEffect } from "react";
 
 export default function Page() {
-  useEffect(() => {
+ useEffect(() => {
     removeInlineStylesFromMain();
+
+    // Chạy 1 lần duy nhất khi component được render lần đầu
+    console.log('Chạy một lần duy nhất');
+
+    // Optional: cleanup function
+    return () => {
+      console.log('Component bị unmount');
+    };
   }, []);
 
   return (

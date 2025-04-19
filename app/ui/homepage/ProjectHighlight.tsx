@@ -16,7 +16,7 @@ const ProjectHighlight = () => {
       <div className="flex items-start justify-between mb-6">
         <h2 className="text-[56px] font-medium mb-6 uppercase max-w-[400px] leading-18">Dự án nổi bật</h2>
         <div className="flex flex-col">
-          <p className="text-sm italic mb-6 max-w-[500px]">"Mỗi dự án là một hành trình sáng tạo, nơi Goox biến ý tưởng thành không gian sống trọn vẹn. </p>
+          <p className="text-sm italic mb-6 max-w-[500px]">Mỗi dự án là một hành trình sáng tạo, nơi Goox biến ý tưởng thành không gian sống trọn vẹn. </p>
           <button className="max-w-[160px] bg-[#061D1B] !text-white !font-medium p-2 bg-primary">Xem tất cả</button>
         </div>
       </div>

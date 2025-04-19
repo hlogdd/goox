@@ -3,7 +3,7 @@
 "use client";
 
 import React from "react";
-import ReactFullpage, { fullpageApi } from "@fullpage/react-fullpage";
+import ReactFullpage from "@fullpage/react-fullpage";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Accordion from "../ui/homepage/Accordion";
@@ -40,7 +40,7 @@ export default function Page() {
         licenseKey={"YOUR_KEY_HERE"}
         scrollingSpeed={1000}
         credits={{ enabled: false }}
-        render={({ fullpageApi }: { fullpageApi: fullpageApi }) => {
+        render={() => {
           return (
             <ReactFullpage.Wrapper>
               <div className="section">

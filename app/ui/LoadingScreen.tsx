@@ -16,7 +16,7 @@ export default function LoadingScreen() {
     });
 
     return controls.stop;
-  }, []);
+  }, [progress]);
 
   return (
     <AnimatePresence>

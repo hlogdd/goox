@@ -1,13 +1,29 @@
 /** @format */
 
+"use client";
+
 import Image from "next/image";
-import React from "react";
+import React, { useEffect } from "react";
 import Accordion from "../ui/homepage/Accordion";
 import ProductList from "../ui/homepage/ProductList";
 import ProjectHighlight from "../ui/homepage/ProjectHighlight";
 import ContactHome from "../ui/homepage/ContactHome";
+import { removeInlineStylesFromMain } from "../lib/function";
 
 const Page = () => {
+
+   useEffect(() => {
+      removeInlineStylesFromMain();
+  
+      // Chạy 1 lần duy nhất khi component được render lần đầu
+      console.log('Chạy một lần duy nhất');
+  
+      // Optional: cleanup function
+      return () => {
+        console.log('Component bị unmount');
+      };
+    }, []);
+
   return (
     <div className="py-[80px]">
       <div className="section py-22">

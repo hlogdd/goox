@@ -5,14 +5,21 @@
 /** @format */
 
 import Image from "next/image";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { removeInlineStylesFromMain } from "../lib/function";
 
-const page = () => {
-  const [showAll, setShowAll] = useState(false);
+const Page = () => {
 
   useEffect(() => {
     removeInlineStylesFromMain();
+
+    // Chạy 1 lần duy nhất khi component được render lần đầu
+    console.log('Chạy một lần duy nhất');
+
+    // Optional: cleanup function
+    return () => {
+      console.log('Component bị unmount');
+    };
   }, []);
 
   return (
@@ -41,7 +48,7 @@ const page = () => {
                 <h1 className="text-3xl font-bold uppercase leading-tight">Storytelling OrganicModern</h1>
                 <h2 className="text-xl uppercase tracking-wide">Elevated Simplicity Architectural Furniture</h2>
               </div>
-              <Image src="/home/homepage_1.png" alt="Mini Room" width={200} height={117} className="rounded-xl object-cover" style={{ height: "117px", width: "auto" }} />
+              <Image src="/home/homeP_1.png" alt="Mini Room" width={200} height={117} className="rounded-xl object-cover" style={{ height: "117px", width: "auto" }} />
             </div>
 
             {/* Row 2: Mid-size Image */}
@@ -154,4 +161,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;
