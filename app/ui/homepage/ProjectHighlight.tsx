@@ -1,4 +1,4 @@
-/** @format */
+"use client";
 
 import Image from "next/image";
 import React from "react";
@@ -12,22 +12,34 @@ const ProjectHighlight = () => {
   ];
 
   return (
-    <div>
-      <div className="flex items-start justify-between mb-6">
-        <h2 className="text-[56px] font-medium mb-6 uppercase max-w-[400px] leading-18">Dự án nổi bật</h2>
+    <div className="px-4 md:px-0">
+      <div className="flex flex-col md:flex-row items-start justify-between mb-6 gap-4">
+        <h2 className="text-[40px] md:text-[56px] font-medium uppercase max-w-[400px] leading-tight">
+          Dự án nổi bật
+        </h2>
         <div className="flex flex-col">
-          <p className="text-sm italic mb-6 max-w-[500px]">Mỗi dự án là một hành trình sáng tạo, nơi Goox biến ý tưởng thành không gian sống trọn vẹn. </p>
-          <button className="max-w-[160px] bg-[#061D1B] !text-white !font-medium p-2 bg-primary">Xem tất cả</button>
+          <p className="text-sm italic mb-4 max-w-[500px]">
+            Mỗi dự án là một hành trình sáng tạo, nơi Goox biến ý tưởng thành không gian sống trọn vẹn.
+          </p>
+          <button className="w-fit bg-[#061D1B] text-white !font-medium px-4 py-2">
+            Xem tất cả
+          </button>
         </div>
       </div>
 
-      <div className="grid grid-cols-2 gap-[30px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px]">
         {productData.map((x, idx) => (
-          <div key={idx} className="flex flex-col gap-2">
-            <div className="max-w-[605px] h-[320px] relative">
-              <Image src={x.image} alt="img" fill className="object-cover" />
+          <div key={idx} className="flex flex-col gap-2 w-full">
+            <div className="relative w-full h-[320px]">
+              <Image
+                src={x.image}
+                alt={x.name}
+                fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                className="object-cover"
+              />
             </div>
-            <p>{x.name}</p>
+            <p className="text-lg font-medium">{x.name}</p>
           </div>
         ))}
       </div>
