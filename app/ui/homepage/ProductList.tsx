@@ -1,4 +1,5 @@
-// components/ProductSlider.tsx
+/** @format */
+
 "use client";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,30 +20,31 @@ const productData = [
 
 export default function ProductList() {
   return (
-    <div className="py-6 px-4">
-      <h2 className="text-[56px] font-medium uppercase text-center mb-8">Danh mục sản phẩm</h2>
+    <div className="py-6 px-4 sm:px-6 md:px-12 lg:px-20">
+      <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-medium uppercase text-center mb-8">Danh mục sản phẩm</h2>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
-        spaceBetween={20}
-        slidesPerView={3}
+        spaceBetween={16}
         loop
         navigation={false}
         autoplay={{ delay: 3000 }}
         breakpoints={{
           0: { slidesPerView: 1.2 },
-          640: { slidesPerView: 3.5 },
+          480: { slidesPerView: 2.2 },
+          640: { slidesPerView: 3 },
+          768: { slidesPerView: 3.5 },
           1024: { slidesPerView: 4.5 },
           1280: { slidesPerView: 5.5 },
           1536: { slidesPerView: 6 },
-          1920: { slidesPerView: 6 },
         }}
-        className="w-full"
-      >
+        className="w-full">
         {productData.map((item, index) => (
           <SwiperSlide key={index}>
-            <div className=" overflow-hidden">
-              <Image src={item.image} alt={item.name} width={190} height={250} className="w-full object-contain" />
-              <div className="text-md text-center p-4 font-medium">{item.name}</div>
+            <div className="w-full overflow-hidden hover:shadow-md transition-shadow duration-300">
+              <div className="w-full relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px]">
+                <Image src={item.image} alt={item.name} fill className="object-contain" />
+              </div>
+              <div className="text-sm sm:text-base text-center p-3 font-medium">{item.name}</div>
             </div>
           </SwiperSlide>
         ))}

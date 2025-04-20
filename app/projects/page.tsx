@@ -8,15 +8,15 @@ import ContactHome from "../ui/homepage/ContactHome";
 import { removeInlineStylesFromMain } from "../lib/function";
 
 const Page = () => {
- useEffect(() => {
+  useEffect(() => {
     removeInlineStylesFromMain();
 
     // Chạy 1 lần duy nhất khi component được render lần đầu
-    console.log('Chạy một lần duy nhất');
+    console.log("Chạy một lần duy nhất");
 
     // Optional: cleanup function
     return () => {
-      console.log('Component bị unmount');
+      console.log("Component bị unmount");
     };
   }, []);
 
@@ -31,7 +31,7 @@ const Page = () => {
             {/* Cột trái */}
             <div className="space-y-6">
               <p className="text-sm font-medium text-gray-500 uppercase m-0">Tổng quan dự án</p>
-              <h1 className="text-[56px] font-medium text-gray-900 leading-[56px]">
+              <h1 className="text-3xl md:text-[56px] font-medium text-gray-900 leading-tight md:leading-[56px]">
                 MIPEC DUPLEX <br /> PENTHOUSE
               </h1>
               <div className="flex gap-8 text-sm text-gray-700">
@@ -70,29 +70,32 @@ const Page = () => {
 
       <section>
         <div className="section__container">
-          <div className="grid grid-cols-2 gap-[240px] py-[58px] px-[100px]">
-            <div className="item flex flex-col gap-4 max-w-[400] mt-[86px]">
-              <div className=" h-[450] relative">
+          {/* Phần đầu: Grid 2 cột */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[240px] py-12 md:py-[58px] px-4 md:px-[100px]">
+            <div className="item flex flex-col gap-4 max-w-[400px] mt-6 md:mt-[86px]">
+              <div className="h-[450px] relative">
                 <Image src={"/projects/project_2.png"} fill alt="img" />
               </div>
               <p>Không gian tiếp khách được mở rộng hoàn toàn về phía vườn sau với hệ cửa kính toàn khung, nơi ánh sáng tràn ngập từ sáng sớm đến cuối ngày.</p>
             </div>
 
-            <div className="item flex flex-col gap-4 max-w-[400]">
-              <div className=" h-[450] relative">
+            <div className="item flex flex-col gap-4 max-w-[400px]">
+              <div className="h-[450px] relative">
                 <Image src={"/projects/project_3.png"} fill alt="img" />
               </div>
               <p>Khu bếp nối liền phòng ăn là nơi phản chiếu đúng tinh thần “ít mà chất”. Tủ bếp làm từ gỗ sồi sơn mờ, mặt đá trắng vân mây và hệ đèn thả ánh vàng ấm</p>
             </div>
           </div>
 
+          {/* Ảnh bên dưới */}
           <div className="flex flex-wrap mb-[30px]">
             <div className="flex-1 w-full min-h-[600px] relative">
               <Image src={"/projects/project_5.png"} layout="fill" objectFit="cover" alt="img" />
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-[30px] w-full min-h-[600px] mb-6">
+          {/* Phần Grid 2 cột cho các ảnh */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full min-h-[600px] mb-6">
             <div className="relative w-full h-[600px]">
               <Image src="/projects/project_6.png" fill alt="ảnh 1" className="object-cover" />
             </div>
@@ -102,16 +105,17 @@ const Page = () => {
             </div>
           </div>
 
-          <div className="flex gap-[30px] py-5">
-            <div className="grid grid-cols-2 gap-[240px] py-[58px] px-[100px]">
-              <div className="item flex flex-col gap-4 max-w-[400] mt-[86px]">
-                <div className=" h-[450] relative">
+          {/* Phần Grid 2 cột khác */}
+          <div className="flex flex-wrap mb-[30px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-[240px] py-12 md:py-[58px] px-4 md:px-[100px]">
+              <div className="item flex flex-col gap-4 max-w-[400px] mt-6 md:mt-[86px]">
+                <div className="h-[450px] relative">
                   <Image src={"/projects/project_2.png"} fill alt="img" />
                 </div>
               </div>
 
-              <div className="item flex flex-col gap-4 max-w-[400]">
-                <div className=" h-[450] relative">
+              <div className="item flex flex-col gap-4 max-w-[400px]">
+                <div className="h-[450px] relative">
                   <Image src={"/projects/project_3.png"} fill alt="img" />
                 </div>
                 <p>
@@ -122,6 +126,7 @@ const Page = () => {
             </div>
           </div>
 
+          {/* Ảnh cuối */}
           <div className="flex flex-wrap mb-[30px]">
             <div className="flex-1 w-full min-h-[600px] relative">
               <Image src={"/projects/project_5.png"} layout="fill" objectFit="cover" alt="img" />

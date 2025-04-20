@@ -1,5 +1,5 @@
 /** @format */
-"use client"
+"use client";
 import { useState } from "react";
 
 const accordionData = [
@@ -22,24 +22,28 @@ export default function Accordion() {
 
   return (
     <div className="w-full mb-3 pt-9 clr-primary">
-      <div className="flex items-center justify-between">
-        <h2 className="text-[60px] font-medium mb-6 uppercase max-w-[400px] leading-18">Giá trị tạo nên Goox</h2>
-        <p className="text-sm italic mb-6 max-w-[500px] ">
+      {/* Tiêu đề + mô tả */}
+      <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
+        <h2 className="text-[32px] md:text-[48px] lg:text-[60px] font-medium uppercase leading-tight max-w-full lg:max-w-[400px]">Giá trị tạo nên Goox</h2>
+        <p className="text-sm italic max-w-full lg:max-w-[500px]">
           “ Với mỗi công trình, chúng tôi không chỉ thi công nội thất, mà còn kiến tạo một không gian có hồn, có phong cách, có cá tính. Ở đây không chỉ là câu chuyện, là nghệ thuật, là dấu ấn của
-          thời gian.{" "}
+          thời gian.”
         </p>
       </div>
 
-      {accordionData.map((item, idx) => (
-        <div key={idx} className={`${idx !== 0 ? "border-t " : ""} border-t-[#D0D0D0] py-4 cursor-pointer`} onClick={() => setOpenIndex(openIndex === idx ? null : idx)}>
-          <div className="flex justify-between items-center">
-            <span className="text-gray-500">/{String(idx + 1).padStart(2, "0")}</span>
-            <h3 className="ml-4 font-semibold text-lg flex-1">{item.title}</h3>
-            <span className="text-xl">{openIndex === idx ? "−" : "+"}</span>
+      {/* Accordion */}
+      <div className="mt-8">
+        {accordionData.map((item, idx) => (
+          <div key={idx} className={`${idx !== 0 ? "border-t " : ""} border-t-[#D0D0D0] py-4 cursor-pointer`} onClick={() => setOpenIndex(openIndex === idx ? null : idx)}>
+            <div className="flex justify-between items-center">
+              <span className="text-gray-500">/{String(idx + 1).padStart(2, "0")}</span>
+              <h3 className="ml-4 font-semibold text-lg flex-1">{item.title}</h3>
+              <span className="text-xl">{openIndex === idx ? "−" : "+"}</span>
+            </div>
+            {openIndex === idx && <div className="mt-2 ml-8 text-gray-600 text-sm transition-all duration-300 ease-in-out">{item.content}</div>}
           </div>
-          {openIndex === idx && <div className="mt-2 ml-8 text-gray-600 text-sm transition-all duration-300 ease-in-out">{item.content}</div>}
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }

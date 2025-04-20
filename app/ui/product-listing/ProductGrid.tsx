@@ -27,26 +27,13 @@ export default function ProductSlider({ title, products }: Props) {
   const [progress, setProgress] = useState(0);
   const swiperRef = useRef<SwiperCore | null>(null);
 
+  // Calculate the progress for the progress bar
   const calculateProgress = () => {
     const swiper = swiperRef.current;
     if (!swiper) return;
 
     const totalSlides = swiper.slides.length;
-    let slidesPerView = 1;
-
-    // Xử lý slidesPerView theo responsive breakpoints
-    if (typeof swiper.params.slidesPerView === "number") {
-      slidesPerView = swiper.params.slidesPerView;
-    } else if (swiper.params.breakpoints) {
-      const currentWidth = window.innerWidth;
-      const breakpoints = swiper.params.breakpoints;
-      const matched = Object.keys(breakpoints)
-        .map(Number)
-        .filter((bp) => bp <= currentWidth)
-        .sort((a, b) => b - a)[0];
-      slidesPerView = typeof breakpoints[matched]?.slidesPerView === "number" ? breakpoints[matched].slidesPerView : 1;
-    }
-
+    const slidesPerView = swiper.params.slidesPerView as number;
     const maxIndex = totalSlides - slidesPerView;
     const current = swiper.activeIndex;
     const percent = Math.min((current / maxIndex) * 100, 100);
@@ -54,9 +41,11 @@ export default function ProductSlider({ title, products }: Props) {
   };
 
   useEffect(() => {
-    // Recalculate on resize to keep it responsive
+    // Recalculate progress bar on resize (debounced to reduce excessive recalculations)
     const handleResize = () => {
-      setTimeout(calculateProgress, 300);
+      setTimeout(() => {
+        calculateProgress();
+      }, 300);
     };
 
     window.addEventListener("resize", handleResize);
@@ -64,7 +53,7 @@ export default function ProductSlider({ title, products }: Props) {
   }, []);
 
   return (
-    <section className="py-12 px-4 md:px-16">
+    <section className="py-6 px-4 sm:py-8 sm:px-6 md:py-12 md:px-16">
       <h2 className="text-2xl md:text-3xl font-bold mb-6">{title}</h2>
 
       <Swiper
@@ -79,17 +68,23 @@ export default function ProductSlider({ title, products }: Props) {
         navigation
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
-          calculateProgress(); // Tính lúc đầu
+          calculateProgress(); // Initialize progress when swiper is set up
         }}
-        onSlideChange={calculateProgress}
-        className="!pb-10">
+        onSlideChange={calculateProgress} // Recalculate progress on slide change
+        className="!pb-10"
+      >
         {products.map((product) => (
           <SwiperSlide key={product.id}>
             <div className="border-transparent hover:border-blue-400 transition">
               <Link href="/product-detail" className="text-2xl font-bold text-gray-900">
-                <Image src={product.image} alt={product.name} width={400} height={400} className="w-full h-auto object-cover" />
+                <Image
+                  src={product.image}
+                  alt={product.name}
+                  width={400}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
               </Link>
- 
               <p className="text-center mt-2 text-sm font-medium text-neutral-800">{product.name}</p>
             </div>
           </SwiperSlide>
@@ -97,8 +92,11 @@ export default function ProductSlider({ title, products }: Props) {
       </Swiper>
 
       {/* Custom progress bar */}
-      <div className="mt-[-22px] w-lg h-[4px] bg-neutral-200 rounded-full overflow-hidden">
-        <div className="h-full bg-[#00332E] transition-all duration-300" style={{ width: `${progress}%` }} />
+      <div className="mt-[-22px] w-full h-[4px] bg-neutral-200 rounded-full overflow-hidden">
+        <div
+          className="h-full bg-[#00332E] transition-all duration-300"
+          style={{ width: `${progress}%` }}
+        />
       </div>
     </section>
   );

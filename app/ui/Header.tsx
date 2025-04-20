@@ -5,6 +5,7 @@ import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
 import Image from 'next/image'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const navItems = [
   { label: 'Trang chủ', href: '/' },
@@ -20,15 +21,16 @@ export default function Header() {
   const pathname = usePathname()
 
   const isActive = (href: string) => pathname === href
-
   const linkClass = (href: string) =>
-    `text-sm ${isActive(href) ? 'active underline underline-offset-4' : 'text-gray-700 '}`
+    `text-base font-medium ${
+      isActive(href) ? 'text-primary underline underline-offset-4' : 'text-gray-800'
+    }`
 
   return (
-    <header className="header w-full fixed top-0 z-50 ">
-      <div className="flex items-center justify-between w-full mx-auto">
-        {/* Left */}
-        <nav className="header__link hidden md:flex items-center gap-[40]">
+    <header className="fixed top-0 w-full bg-white shadow z-50 h-[60px]">
+      <div className="flex items-center justify-between px-4 h-full md:px-8 max-w-screen-xl mx-auto">
+        {/* Left nav (desktop) */}
+        <nav className="hidden md:flex items-center gap-10">
           {navItems.slice(0, 3).map((item) => (
             <Link key={item.href} href={item.href} className={linkClass(item.href)}>
               {item.label}
@@ -37,12 +39,12 @@ export default function Header() {
         </nav>
 
         {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-gray-900">
-          <Image src={"/ic_logo.svg"} width={172} height={80} alt='logo'/>
+        <Link href="/">
+          <Image src="/ic_logo.svg" width={120} height={40} alt="logo" />
         </Link>
 
-        {/* Right */}
-        <nav className="header__link hidden md:flex items-center gap-[40]">
+        {/* Right nav (desktop) */}
+        <nav className="hidden md:flex items-center gap-10">
           {navItems.slice(3).map((item) => (
             <Link key={item.href} href={item.href} className={linkClass(item.href)}>
               {item.label}
@@ -50,32 +52,47 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-gray-800"
-        >
-          {open ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* Toggle Button (mobile only) */}
+        <div className="md:hidden flex items-center gap-2">
+          {open ? (
+            <button onClick={() => setOpen(false)} className="text-gray-700">
+              <X size={28} />
+            </button>
+          ) : (
+            <button onClick={() => setOpen(true)} className="text-gray-700">
+              <Menu size={28} />
+            </button>
+          )}
+        </div>
       </div>
 
-      {/* Mobile Menu */}
-      {open && (
-        <div className="md:hidden mt-3 bg-white shadow rounded-md overflow-hidden">
-          {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setOpen(false)}
-              className={`block px-4 py-3 text-sm border-b last:border-none hover:bg-gray-100 ${
-                isActive(item.href) ? 'bg-gray-100 font-semibold' : ''
-              }`}
-            >
-              {item.label}
-            </Link>
-          ))}
-        </div>
-      )}
+      {/* Mobile Slide-in Menu Panel */}
+      <AnimatePresence>
+        {open && (
+          <motion.div
+            className="fixed top-[60px] right-0 w-[100%] h-[calc(100vh-60px)] bg-white z-40 shadow-lg py-6 flex flex-col"
+            initial={{ x: '100%' }}
+            animate={{ x: 0 }}
+            exit={{ x: '100%' }}
+            transition={{ type: 'spring', stiffness: 300, damping: 30 }}
+          >
+            <div className="flex flex-col gap-4">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  onClick={() => setOpen(false)}
+                  className={`py-2 px-4 border-b border-b-[#d5d5d5] hover:bg-gray-100 transition ${
+                    isActive(item.href) ? 'text-[#061D1B] font-semibold' : ''
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </header>
   )
 }
