@@ -1,20 +1,24 @@
 /** @format */
 
 // app/ui/footer.tsx hoặc components/Footer.tsx
-import Link from 'next/link';
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 export default function Footer() {
+  const pathname = usePathname();
+
   const navItems = [
-    { label: 'Trang chủ', href: '/' },
-    { label: 'Danh mục sản phẩm', href: '/product-listing' },
-    { label: 'Dự án thực tế', href: '/projects' },
-    { label: 'Thông tin thương hiệu', href: '/about' },
-    { label: 'Liên hệ', href: '/contact' },
-    { label: 'Blog', href: '/blogs' },
+    { label: "Trang chủ", href: "/" },
+    { label: "Danh mục sản phẩm", href: "/product-listing" },
+    { label: "Dự án thực tế", href: "/projects" },
+    { label: "Thông tin thương hiệu", href: "/about" },
+    { label: "Liên hệ", href: "/contact" },
+    { label: "Blog", href: "/blogs" },
   ];
 
   return (
-    <footer className="bg-[#061D1B] text-[#EEEBE5] py-[100px] px-6 md:px-16">
+    <footer className={`bg-[#061D1B] text-[#EEEBE5] py-[100px] px-6 md:px-16 ${pathname === "/" ? "min-h-screen relative" : ""}`}>
       <div className="flex flex-wrap justify-between gap-8">
         {/* Cột 1 - Logo + Thông tin */}
         <div className="max-w-[250px] w-full">
@@ -65,7 +69,15 @@ export default function Footer() {
             ))}
           </div>
         </div>
+
+       
       </div>
+
+      {pathname === "/" && (
+          <div className="w-full h-[calc(100vh-240px)] absolute left-0">
+            <Image src="/home/background_footer.png" fill alt="background" className="object-cover"/>
+          </div>
+        )}
     </footer>
   );
 }

@@ -10,6 +10,36 @@ import Accordion from "../ui/homepage/Accordion";
 import ProductList from "../ui/homepage/ProductList";
 import ProjectHighlight from "../ui/homepage/ProjectHighlight";
 import ContactHome from "../ui/homepage/ContactHome";
+import Footer from "../ui/Footer";
+
+interface ImageWrapProps {
+  src: string;
+  col: number;
+  row: number;
+}
+
+export const ImageWrap: React.FC<ImageWrapProps> = ({ src, col, row }) => (
+  <motion.div className={`relative aspect-[2/3] col-start-${col} row-start-${row} w-full h-full`}>
+    <Image src={src} alt="" fill className="object-cover" />
+  </motion.div>
+);
+
+interface TextBlockProps {
+  content: string;
+  col: number;
+  row: number;
+  type?: "text" | "title";
+}
+
+export const TextBlock: React.FC<TextBlockProps> = ({ content, col, row, type = "text" }) => (
+  <motion.div className={`flex justify-center items-end text-center font-bold col-start-${col} row-start-${row}`}>
+    {type === "title" ? (
+      <h1 className="text-[32px] md:text-[48px] lg:text-[64px] text-gray-800">{content}</h1>
+    ) : (
+      <p className="text-[20px] md:text-[28px] lg:text-[32px] leading-snug whitespace-pre-line">{content}</p>
+    )}
+  </motion.div>
+);
 
 export default function Page() {
   const slideFromLeft = {
@@ -32,7 +62,7 @@ export default function Page() {
 
   const imagesRow1 = ["/home/homepage_1.png", "/home/homepage_2.png", "/home/homepage_3.png", "/home/homepage_4.png"];
 
-  const imagesRow2 = ["/home/homepage_5.png", "/home/homepage_6.png", "/home/homepage_6.png"];
+  const imagesRow2 = ["/home/homepage_5.png", "/home/homepage_6.png", "/home/homepage_6.png","/home/homepage_7.png"];
 
   return (
     <>
@@ -44,60 +74,63 @@ export default function Page() {
           return (
             <ReactFullpage.Wrapper>
               <div className="section">
-                <div className="grid grid-rows-2 grid-cols-5 gap-3 h-full px-5 py-10">
-                  {/* === ROW 1 === */}
 
-                  {imagesRow1.map((src, i) => (
-                    <motion.div
-                      key={`img1-${i}`}
-                      custom={i}
-                      variants={slideFromLeft}
-                      initial="hidden"
-                      animate="visible"
-                      className={`flex justify-center items-center row-start-1 col-start-${i < 2 ? i + 1 : i + 2}`}>
-                      <Image src={src} alt={`img1-${i}`} width={273} height={430} className="object-cover" />
-                    </motion.div>
-                  ))}
-
-                  {/* "goox" vào cột 3 của hàng 1 */}
-                  <motion.div variants={textVariant} custom={3} initial="hidden" animate="visible" className="flex justify-start items-end font-bold row-start-1 col-start-3">
-                    <h1 className="text-[64px] font-bold text-gray-800">goox</h1>
-                  </motion.div>
-
-                  {/* === ROW 2 === */}
-
-                  {/* Text left vào cột 1 hàng 2 */}
-                  <motion.div variants={textVariant} custom={1} initial="hidden" animate="visible" className="flex items-end justify-end font-bold row-start-2 col-start-1">
-                    <p className="text-[32px]">
-                      Giản dị trong
-                      <br />
-                      hình dáng.
-                    </p>
-                  </motion.div>
-
-                  {/* Các ảnh tiếp theo ở cột 2, 3, 4 */}
-                  {imagesRow2.map((src, i) => (
-                    <motion.div
-                      key={`img2-${i}`}
-                      custom={i + 4}
-                      variants={slideFromLeft}
-                      initial="hidden"
-                      animate="visible"
-                      className={`flex justify-center items-center row-start-2 col-start-${i + 2}`}>
-                      <Image src={src} alt={`img2-${i}`} width={273} height={430} className="object-cover" />
-                    </motion.div>
-                  ))}
-
-                  {/* Text right vào cột 4 hàng 2 */}
-                  <motion.div variants={textVariant} custom={2} initial="hidden" animate="visible" className="flex justify-start items-end font-bold row-start-2 col-start-5">
-                    <p className="text-[32px]">
-                      Tinh tế trong
-                      <br />
-                      từng đường nét.
-                    </p>
-                  </motion.div>
-                </div>
+              {/* === DESKTOP (≥ lg) === */}
+              <div className="hidden lg:grid grid-cols-5 grid-rows-2 gap-3 px-5 py-10">
+                {/* Hàng 1: ảnh1 - ảnh2 - goox - ảnh3 - ảnh4 */}
+                <ImageWrap src={imagesRow1[0]} col={1} row={1} />
+                <ImageWrap src={imagesRow1[1]} col={2} row={1} />
+                <TextBlock content="goox" type="title" col={3} row={1} />
+                <ImageWrap src={imagesRow1[2]} col={4} row={1} />
+                <ImageWrap src={imagesRow1[3]} col={5} row={1} /> {/* ảnh bị mất trước đây */}
+                {/* Hàng 2: text1 - ảnh5 - ảnh6 - text2 - ảnh7 */}
+                <TextBlock content="Giản dị trong\nhình dáng." col={1} row={2} />
+                <ImageWrap src={imagesRow2[0]} col={2} row={2} />
+                <ImageWrap src={imagesRow2[1]} col={3} row={2} />
+                <TextBlock content="Tinh tế trong\nđường nét." col={4} row={2} />
+                <ImageWrap src={imagesRow2[2]} col={5} row={2} />
               </div>
+
+              {/* === TABLET (md - lg) === */}
+              <div className="hidden md:grid lg:hidden grid-cols-4 grid-rows-3 gap-3 px-5 py-10">
+                {/* Hàng 1: ảnh1 - ảnh2 - goox - ảnh3 */}
+                <ImageWrap src={imagesRow1[0]} col={1} row={1} />
+                <ImageWrap src={imagesRow1[1]} col={2} row={1} />
+                <TextBlock content="goox" type="title" col={3} row={1} />
+                <ImageWrap src={imagesRow1[2]} col={4} row={1} />
+
+                {/* Hàng 2: text1 - ảnh4 - ảnh5 - text2 */}
+                <TextBlock content="Giản dị trong\nhình dáng." col={1} row={2} />
+                <ImageWrap src={imagesRow2[0]} col={2} row={2} />
+                <ImageWrap src={imagesRow2[1]} col={3} row={2} />
+                <TextBlock content="Tinh tế trong\nđường nét." col={4} row={2} />
+
+                {/* Hàng 3: ảnh6 - empty - empty - ảnh7 */}
+                <ImageWrap src={imagesRow2[2]} col={1} row={3} />
+                <div className="col-start-2 row-start-3" />
+                <div className="col-start-3 row-start-3" />
+                <ImageWrap src={imagesRow2[3]} col={4} row={3} />
+              </div>
+
+              {/* === MOBILE (< md) === */}
+              <div className="grid md:hidden grid-cols-3 grid-rows-3 gap-3 px-5 py-10">
+                {/* Hàng 1: ảnh1 - goox - ảnh2 */}
+                <ImageWrap src={imagesRow1[0]} col={1} row={1} />
+                <TextBlock content="goox" type="title" col={2} row={1} />
+                <ImageWrap src={imagesRow1[1]} col={3} row={1} />
+
+                {/* Hàng 2: ảnh3 - text1 - ảnh4 */}
+                <ImageWrap src={imagesRow1[2]} col={1} row={2} />
+                <TextBlock content="Giản dị trong\nhình dáng." col={2} row={2} />
+                <ImageWrap src={imagesRow2[0]} col={3} row={2} />
+
+                {/* Hàng 3: ảnh5 - ảnh6 - text2 */}
+                <ImageWrap src={imagesRow2[1]} col={1} row={3} />
+                <ImageWrap src={imagesRow2[2]} col={2} row={3} />
+                <TextBlock content="Tinh tế trong\nđường nét." col={3} row={3} />
+              </div>
+              </div>
+
 
               {/* Các section tiếp theo */}
               <div className="section">
@@ -198,6 +231,10 @@ export default function Page() {
                 <div className="section__container">
                   <ContactHome />
                 </div>
+              </div>
+
+              <div className="section min-h-screen">
+                <Footer />
               </div>
             </ReactFullpage.Wrapper>
           );
