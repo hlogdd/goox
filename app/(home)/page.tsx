@@ -4,61 +4,34 @@
 
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Accordion from "../ui/homepage/Accordion";
 import ProductList from "../ui/homepage/ProductList";
 import ProjectHighlight from "../ui/homepage/ProjectHighlight";
 import ContactHome from "../ui/homepage/ContactHome";
 import Footer from "../ui/Footer";
+import ImageWrap from "../ui/homepage/ImageWrap";
+import { TextBlock } from "../ui/homepage/TextBlock";
 
-interface ImageWrapProps {
-  src: string;
-  col: number;
-  row: number;
-}
-
-export const ImageWrap: React.FC<ImageWrapProps> = ({ src, col, row }) => (
-  <motion.div className={`relative aspect-[2/3] col-start-${col} row-start-${row} w-full h-full`}>
-    <Image src={src} alt="" fill className="object-cover" />
-  </motion.div>
-);
-
-interface TextBlockProps {
-  content: string;
-  col: number;
-  row: number;
-  type?: "text" | "title";
-}
-
-export const TextBlock: React.FC<TextBlockProps> = ({ content, col, row, type = "text" }) => (
-  <motion.div className={`flex justify-center items-end text-center font-bold col-start-${col} row-start-${row}`}>
-    {type === "title" ? (
-      <h1 className="text-[32px] md:text-[48px] lg:text-[64px] text-gray-800">{content}</h1>
-    ) : (
-      <p className="text-[20px] md:text-[28px] lg:text-[32px] leading-snug whitespace-pre-line">{content}</p>
-    )}
-  </motion.div>
-);
 
 export default function Page() {
-  const slideFromLeft = {
-    hidden: { opacity: 0, x: -50 },
-    visible: (i: number) => ({
-      opacity: 1,
-      x: 0,
-      transition: { delay: i * 0.2 + 1, duration: 0.6 }, // Delay bắt đầu sau text
-    }),
-  };
+  // const slideFromLeft = {
+  //   hidden: { opacity: 0, x: -50 },
+  //   visible: (i: number) => ({
+  //     opacity: 1,
+  //     x: 0,
+  //     transition: { delay: i * 0.2 + 1, duration: 0.6 }, // Delay bắt đầu sau text
+  //   }),
+  // };
 
-  const textVariant = {
-    hidden: { opacity: 0, y: -30 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: { delay: i * 0.2, duration: 0.6 },
-    }),
-  };
+  // const textVariant = {
+  //   hidden: { opacity: 0, y: -30 },
+  //   visible: (i: number) => ({
+  //     opacity: 1,
+  //     y: 0,
+  //     transition: { delay: i * 0.2, duration: 0.6 },
+  //   }),
+  // };
 
   const imagesRow1 = ["/home/homepage_1.png", "/home/homepage_2.png", "/home/homepage_3.png", "/home/homepage_4.png"];
 
