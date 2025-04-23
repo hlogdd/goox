@@ -21,7 +21,7 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="max-w-[1240px] mx-auto px-3 mt-12">
+    <div className="max-w-[1240px] mx-auto px-3 mt-12 md:mt-8">
       <section className="py-8 md:py-16">
         <div className="mx-auto px-4 max-w-[1240px]">
           {/* Breadcrumb */}
