@@ -235,7 +235,11 @@ export default function Page() {
               <div className="section">
                 <div className="section__container">
                   <Accordion />
+                </div>
+              </div>
 
+              <div className="section">
+                <div className="section__container">
                   <ProductList />
                 </div>
               </div>
