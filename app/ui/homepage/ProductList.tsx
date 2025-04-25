@@ -20,8 +20,8 @@ const productData = [
 
 export default function ProductList() {
   return (
-    <div className="py-6 px-4 sm:px-6 md:px-12 lg:px-20">
-      <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-medium uppercase text-center mb-8">Danh mục sản phẩm</h2>
+    <div className="py-6 mt-12">
+      <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-medium uppercase text-center mb-4 text-[#061D1B]">Danh mục sản phẩm</h2>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={16}
@@ -30,9 +30,9 @@ export default function ProductList() {
         autoplay={{ delay: 3000 }}
         breakpoints={{
           0: { slidesPerView: 1.2 },
-          480: { slidesPerView: 2.2 },
-          640: { slidesPerView: 3 },
-          768: { slidesPerView: 3.5 },
+          480: { slidesPerView: 3.2 },
+          640: { slidesPerView: 3.5 },
+          768: { slidesPerView: 4.2 },
           1024: { slidesPerView: 4.5 },
           1280: { slidesPerView: 5.5 },
           1536: { slidesPerView: 6 },
