@@ -5,19 +5,19 @@ import React from "react";
 
 const ContactHome = () => {
   return (
-    <div className="relative">
+    <div className="relative py-12">
       {/* Ảnh nền nằm ngoài cùng, sát phải */}
-      <div className="absolute hidden lg:block top-0 right-0 bottom-0 w-1/2 z-0 pointer-events-none">
+      <div className="absolute hidden lg:block top-0 right-10 bottom-0 w-1/2 z-0 pointer-events-none">
         <Image
           src="/home/homepage_contact_bg.png"
           alt="Background"
           fill
-          className="object-cover"
+          className="object-contain"
         />
       </div>
 
       {/* Content chính */}
-      <div className="flex flex-col md:flex-row gap-12 py-12 md:py-24 px-6 md:px-24 relative z-10">
+      <div className="flex flex-col md:flex-row gap-12 py-0 px-6 md:px-24 relative z-10">
         {/* Form bên trái */}
         <div className="flex-1">
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-medium mb-8 uppercase leading-[1.1] max-w-[400px]">
@@ -89,12 +89,12 @@ const ContactHome = () => {
 
         {/* Ảnh chính */}
         <div className="flex-1 hidden lg:flex justify-center items-center"> {/* hidden for mobile/tablet, visible on large screens */}
-          <div className="relative max-w-[400px] w-full h-[500px] md:max-w-[500px] md:h-[770px] shadow-lg z-10 overflow-hidden">
+          <div className="relative max-w-[400px] w-full h-[500px] md:max-w-[500px] md:h-[770px] z-10">
             <Image
               src="/home/homepage_contact.png"
               alt="Contact Illustration"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </div>
         </div>

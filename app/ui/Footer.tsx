@@ -38,7 +38,7 @@ export default function Footer() {
         </div>
 
         {/* Cột 2, Cột 3, Cột 4 - Menu, Thông tin thêm, Mạng xã hội */}
-        <div className="flex flex-wrap gap-8 justify-between w-full md:w-auto">
+        <div className="flex flex-wrap gap-[20px] 2xl:gap-[120px] md:gap-[60px] justify-between w-full md:w-auto">
           {/* Cột 2 - Menu */}
           <div className="w-full sm:w-auto space-y-2 font-medium">
             <p className="min-h-[12px]"></p>
@@ -52,7 +52,7 @@ export default function Footer() {
           {/* Cột 3 - Thông tin thêm */}
           <div className="w-full sm:w-auto space-y-2 font-medium">
             <p className="min-h-[12px]"></p>
-            {navItems.slice(3, 5).map((item) => (
+            {navItems.slice(3, 6).map((item) => (
               <Link key={item.label} href={item.href}>
                 <p className="mb-[16px] hover:underline cursor-pointer">{item.label}</p>
               </Link>
@@ -60,22 +60,22 @@ export default function Footer() {
           </div>
 
           {/* Cột 4 - Mạng xã hội */}
-          <div className="w-full sm:w-auto space-y-2 font-medium">
+          {/* <div className="w-full sm:w-auto space-y-2 font-medium">
             <p className="min-h-[12px]"></p>
             {navItems.slice(5).map((item) => (
               <Link key={item.label} href={item.href}>
                 <p className="mb-[16px] hover:underline cursor-pointer">{item.label}</p>
               </Link>
             ))}
-          </div>
+          </div> */}
         </div>
 
        
       </div>
 
       {pathname === "/" && (
-          <div className="w-full h-[calc(100vh-240px)] absolute left-0">
-            <Image src="/home/background_footer.png" fill alt="background" className="object-cover"/>
+          <div className="w-full h-[50%] 2xl:h-[calc(100vh-240px)] md:h-[50%] absolute left-0 bottom-0">
+            <Image src="/home/background_footer.png" fill alt="background" className="object-cover 2xl:object-contain"/>
           </div>
         )}
     </footer>

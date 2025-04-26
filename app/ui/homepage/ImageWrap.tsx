@@ -24,7 +24,7 @@ const ImageWrap: React.FC<ImageWrapProps> = ({ src, col, row, animation }) => {
       custom={animation?.custom}
       viewport={{ once: true, amount: 0.2 }}
     >
-      <div className="relative w-full h-[150px] sm:h-[280px] md:h-[350px] lg:h-[380px] xl:h-[430px] 2xl:h-[530px]">
+      <div className="relative w-full h-[150px] sm:h-[280px] md:h-[350px] lg:h-[380px] xl:h-[430px] 2xl:h-[400px]">
         <Image src={src} alt="" fill className="object-cover" />
       </div>
     </motion.div>

@@ -21,7 +21,7 @@ const productData = [
 export default function ProductList() {
   return (
     <div className="py-6 mt-12">
-      <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-medium uppercase text-center mb-4 text-[#061D1B]">Danh mục sản phẩm</h2>
+      <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-medium uppercase text-center mb-[40px] text-[#061D1B]">Danh mục sản phẩm</h2>
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={16}
@@ -41,8 +41,8 @@ export default function ProductList() {
         {productData.map((item, index) => (
           <SwiperSlide key={index}>
             <div className="w-full overflow-hidden hover:shadow-md transition-shadow duration-300">
-              <div className="w-full relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px]">
-                <Image src={item.image} alt={item.name} fill className="object-contain" />
+              <div className="w-full relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden group">
+                <Image src={item.image} alt={item.name} fill className="object-cover transition-transform duration-500 ease-in-out group-hover:scale-[1.1]" />
               </div>
               <div className="text-sm sm:text-base text-center p-3 font-medium">{item.name}</div>
             </div>

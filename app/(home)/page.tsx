@@ -142,12 +142,12 @@ export default function Page() {
               </div>
 
               {/* Các section tiếp theo */}
-              <div className="section bg-[#EEEBE5] bg-cover bg-center " style={{ backgroundImage: "url('/home/homepage_bg.png')" }}>
+              <div className="section bg-[#EEEBE5] bg-contain bg-center " style={{ backgroundImage: "url('/home/homepage_bg.png')" }}>
                 <div className="section__container flex flex-col gap-[64px] 2xl:gap-[120px] xl:gap-[80px]">
                   {/* Tiêu đề và mô tả */}
                   <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-                    <h2 className="leading-[40px] md:leading-[35px] lg:leading-[55px] uppercase text-[32px] md:text-3xl lg:text-[48px] font-medium md:max-w-[30%]">Chúng tôi đã tạo ra hơn 700 thiết kế nội thất gỗ độc bản</h2>
-                    <div className="space-y-6 md:max-w-[30%]">
+                    <h2 className="leading-[40px] md:leading-[35px] lg:leading-[55px] uppercase text-[32px] md:text-3xl lg:text-[48px] font-medium  xl:max-w-[30%] md:max-w-[50%]">Chúng tôi đã tạo ra hơn 700 thiết kế nội thất gỗ độc bản</h2>
+                    <div className="space-y-6 xl:max-w-[30%] md:max-w-[40%]">
                       <p className="text-gray-700 text-base md:text-md leading-relaxed">
                         Chúng tôi là một đội ngũ thiết kế và thi công đầy đam mê, chuyên tạo nên những không gian sống và làm việc chuẩn thẩm mỹ, tối ưu công năng. Goox đặc biệt chú trọng vào chất
                         liệu gỗ tự nhiên, chi tiết thủ công và sự hài hoà trong tổng thể – tạo nên những công trình bền vững, mang dấu ấn riêng biệt.
@@ -164,30 +164,30 @@ export default function Page() {
                   {/* Thống kê */}
                   <div className="grid grid-cols-2 md:grid-cols-4 text-center gap-6">
                     <div ref={counterRef1}>
-                      <h3 className="text-5xl md:text-[110px] font-bold">{count1}+</h3>
-                      <p className="text-sm md:text-md mt-2">Năm kinh nghiệm sản xuất</p>
+                      <h3 className="text-5xl md:text-[90px] xl:text-[110px] font-bold">{count1}+</h3>
+                      <p className="text-md md:text-lg mt-2">Năm kinh nghiệm sản xuất</p>
                     </div>
                     <div ref={counterRef2}>
-                      <h3 className="text-5xl md:text-[110px] font-bold">{count2}+</h3>
-                      <p className="text-sm md:text-md mt-2">Số dự án đã thực hiện</p>
+                      <h3 className="text-5xl md:text-[90px] xl:text-[110px] font-bold">{count2}+</h3>
+                      <p className="text-md md:text-lg mt-2">Số dự án đã thực hiện</p>
                     </div>
                     <div ref={counterRef3}>
-                      <h3 className="text-5xl md:text-[110px] font-bold">{count3}%</h3>
-                      <p className="text-sm md:text-md mt-2">Khách hàng hài lòng</p>
+                      <h3 className="text-5xl md:text-[90px] xl:text-[110px] font-bold">{count3}%</h3>
+                      <p className="text-md md:text-lg mt-2">Khách hàng hài lòng</p>
                     </div>
                     <div ref={counterRef4}>
-                      <h3 className="text-5xl md:text-[110px] font-bold">{count4}+</h3>
-                      <p className="text-sm md:text-md mt-2">Chi nhánh trên toàn quốc</p>
+                      <h3 className="text-5xl md:text-[90px] xl:text-[110px] font-bold">{count4}+</h3>
+                      <p className="text-md md:text-lg mt-2">Chi nhánh trên toàn quốc</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="section">
-                <div className="section__container space-y-[60px] py-[60px]">
+                <div className="section__container space-y-[60px] py-[100px]">
                   {/* Item 1 */}
                   <div className="flex flex-col lg:flex-row items-center gap-8 px-6 lg:px-[60px]">
-                    <div className="w-full lg:w-1/2 h-[300px] lg:h-[500px] relative max-w-[500px]">
+                    <div className="w-[300px] xl:w-1/2 md:w-[300px] h-[300px] xl:h-[500px] lg:h-[300px] md:h-[280px] relative max-w-[500px]">
                       <Image src={"/home/homepage_sec_3_1.png"} alt="Xuong san xuat rieng" fill className="object-contain" />
                       {/* Div màu nằm ở góc phải dưới */}
                       <div className="absolute bottom-4 -right-0 lg:bottom-[25px] lg:-right-[25px] translate-y-1/2 bg-[#142927] p-4 text-white w-[60px] h-[60px] lg:w-[80px] lg:h-[80px]">
@@ -202,7 +202,7 @@ export default function Page() {
 
                   {/* Item 2 */}
                   <div className="flex flex-col lg:flex-row-reverse items-center gap-8 px-6 lg:px-[60px]">
-                    <div className="w-full lg:w-1/2 h-[300px] lg:h-[500px] relative max-w-[500px]">
+                    <div className="w-full xl:w-1/2 md:w-[00px] h-[300px] xl:h-[500px] lg:h-[300px] md:h-[280px] relative max-w-[500px]">
                       <Image src={"/home/homepage_sec_3_2.png"} alt="Vat lieu cao cap" fill className="object-contain" />
                       <div className="absolute bottom-4 left-4 lg:bottom-[25px] lg:-left-[25px] translate-y-1/2 p-4 text-white w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] -z-1">
                         <Image src={"/home/home_section3_sub.png"} alt="Vat lieu" fill className="object-contain" />
@@ -216,7 +216,7 @@ export default function Page() {
 
                   {/* Item 3 */}
                   <div className="flex flex-col lg:flex-row items-center gap-8 px-6 lg:px-[60px]">
-                    <div className="w-full lg:w-1/2 h-[300px] lg:h-[500px] relative max-w-[500px]">
+                    <div className="w-full xl:w-1/2 md:w-[00px] h-[300px] xl:h-[500px] lg:h-[300px] md:h-[280px] relative max-w-[500px]">
                       <Image src={"/home/homepage_sec_3_3.png"} alt="Doi ngu tho" fill className="object-contain" />
                       <div className="absolute bottom-4 -right-0 lg:bottom-[25px] lg:-right-[25px] translate-y-1/2 bg-[#142927] p-4 text-white w-[60px] h-[60px] lg:w-[80px] lg:h-[80px]">
                         <span></span>

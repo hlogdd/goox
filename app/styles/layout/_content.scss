@@ -34,4 +34,8 @@
 
 .bg-primary {
   background: #061D1B !important;
+
+  &:hover {
+    background: #283C3A !important;
+  }
 }
