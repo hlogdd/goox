@@ -39,3 +39,51 @@
     background: #283C3A !important;
   }
 }
+
+//
+
+// .swiper-vertical > .swiper-button-next,
+// .swiper-vertical > .swiper-button-prev {
+//   left: auto;
+//   right: 10px;
+// }
+
+// .swiper-vertical > .swiper-button-prev {
+//   top: 10px;
+// }
+
+// .swiper-vertical > .swiper-button-next {
+//   bottom: 10px;
+//   top: auto;
+// }
+
+// .swiper-button-next,
+// .swiper-button-prev {
+//   color: #000;
+//   background: rgba(255, 255, 255, 0.8);
+//   width: 40px;
+//   height: 40px;
+//   border-radius: 50%;
+// }
+
+// .swiper-button-next::after,
+// .swiper-button-prev::after {
+//   font-size: 20px;
+//   font-weight: bold;
+// }
+
+/* Thêm vào globals.css */
+// .swiper-vertical .swiper-slide {
+//   height: 33.33333% !important;
+//   display: flex !important;
+//   align-items: center;
+//   justify-content: center;
+// }
+
+// .swiper-vertical  .swiper-slide.swiper-slide-active {
+//   height: 50% !important;
+// }
+
+.swiper-zoom-container {
+  height: 100%;
+}

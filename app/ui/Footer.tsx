@@ -18,7 +18,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className={`bg-[#061D1B] text-[#EEEBE5] py-[100px] px-6 md:px-16 ${pathname === "/" ? "min-h-screen relative" : ""}`}>
+    <footer className={`bg-[#061D1B] text-[#EEEBE5] py-[100px] px-6 md:px-16 ${pathname === "/" ? "min-h-screen relative" : ""} ${pathname === "/projects-master" ? "hidden" : ""}`}>
       <div className="flex flex-wrap justify-between gap-8">
         {/* Cột 1 - Logo + Thông tin */}
         <div className="max-w-[250px] w-full">

@@ -10,7 +10,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 const navItems = [
   { label: 'Trang chủ', href: '/' },
   { label: 'Danh mục sản phẩm', href: '/product-listing' },
-  { label: 'Dự án thực tế', href: '/projects' },
+  { label: 'Dự án thực tế', href: '/projects-master' },
   { label: 'Thông tin thương hiệu', href: '/about' },
   { label: 'Liên hệ', href: '/contact' },
   { label: 'Blog', href: '/blogs' },
@@ -22,8 +22,8 @@ export default function Header() {
 
   const isActive = (href: string) => pathname === href
   const linkClass = (href: string) =>
-    `text-base font-medium ${
-      isActive(href) ? 'text-primary underline underline-offset-4' : 'text-gray-800'
+    `text-[#697775]  ${
+      isActive(href) ? 'text-primary font-medium underline underline-offset-4' : 'text-gray-800'
     }`
 
   return (

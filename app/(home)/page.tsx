@@ -13,26 +13,9 @@ import Footer from "../ui/Footer";
 import ImageWrap from "../ui/homepage/ImageWrap";
 import { TextBlock } from "../ui/homepage/TextBlock";
 import useCounterOnVisible from "../hooks/useCounter";
+import { motion } from "framer-motion";
 
 export default function Page() {
-  // const slideFromLeft = {
-  //   hidden: { opacity: 0, x: -50 },
-  //   visible: (i: number) => ({
-  //     opacity: 1,
-  //     x: 0,
-  //     transition: { delay: i * 0.2 + 1, duration: 0.6 }, // Delay bắt đầu sau text
-  //   }),
-  // };
-
-  // const textVariant = {
-  //   hidden: { opacity: 0, y: -30 },
-  //   visible: (i: number) => ({
-  //     opacity: 1,
-  //     y: 0,
-  //     transition: { delay: i * 0.2, duration: 0.6 },
-  //   }),
-  // };
-
   const [screenWidth, setScreenWidth] = useState(0);
 
   useEffect(() => {
@@ -142,11 +125,21 @@ export default function Page() {
               </div>
 
               {/* Các section tiếp theo */}
-              <div className="section bg-[#EEEBE5] bg-contain bg-center " style={{ backgroundImage: "url('/home/homepage_bg.png')" }}>
+              <div className="section bg-[#EEEBE5] bg-contain bg-center" style={{ backgroundImage: "url('/home/homepage_bg.png')" }}>
                 <div className="section__container flex flex-col gap-[64px] 2xl:gap-[120px] xl:gap-[80px]">
                   {/* Tiêu đề và mô tả */}
-                  <div className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
-                    <h2 className="leading-[40px] md:leading-[35px] lg:leading-[55px] uppercase text-[32px] md:text-3xl lg:text-[48px] font-medium  xl:max-w-[30%] md:max-w-[50%]">Chúng tôi đã tạo ra hơn 700 thiết kế nội thất gỗ độc bản</h2>
+                  <motion.div
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col md:flex-row items-start md:items-center justify-between gap-8">
+                    <h2
+                      className="leading-[40px] md:leading-[35px] lg:leading-[55px] uppercase text-[32px] md:text-3xl lg:text-[48px] font-medium  xl:max-w-[30%] md:max-w-[50%]"
+                      data-aos="fade-left"
+                      data-aos-delay="200">
+                      Chúng tôi đã tạo ra hơn 700 thiết kế nội thất gỗ độc bản
+                    </h2>
                     <div className="space-y-6 xl:max-w-[30%] md:max-w-[40%]">
                       <p className="text-gray-700 text-base md:text-md leading-relaxed">
                         Chúng tôi là một đội ngũ thiết kế và thi công đầy đam mê, chuyên tạo nên những không gian sống và làm việc chuẩn thẩm mỹ, tối ưu công năng. Goox đặc biệt chú trọng vào chất
@@ -159,10 +152,15 @@ export default function Page() {
                         </svg>
                       </button>
                     </div>
-                  </div>
+                  </motion.div>
 
                   {/* Thống kê */}
-                  <div className="grid grid-cols-2 md:grid-cols-4 text-center gap-6">
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="grid grid-cols-2 md:grid-cols-4 text-center gap-6">
                     <div ref={counterRef1}>
                       <h3 className="text-5xl md:text-[90px] xl:text-[110px] font-bold">{count1}+</h3>
                       <p className="text-md md:text-lg mt-2">Năm kinh nghiệm sản xuất</p>
@@ -179,14 +177,19 @@ export default function Page() {
                       <h3 className="text-5xl md:text-[90px] xl:text-[110px] font-bold">{count4}+</h3>
                       <p className="text-md md:text-lg mt-2">Chi nhánh trên toàn quốc</p>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
 
               <div className="section">
                 <div className="section__container space-y-[60px] py-[100px]">
                   {/* Item 1 */}
-                  <div className="flex flex-col lg:flex-row items-center gap-8 px-6 lg:px-[60px]">
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col lg:flex-row items-center gap-8 px-6 lg:px-[60px]">
                     <div className="w-[300px] xl:w-1/2 md:w-[300px] h-[300px] xl:h-[500px] lg:h-[300px] md:h-[280px] relative max-w-[500px]">
                       <Image src={"/home/homepage_sec_3_1.png"} alt="Xuong san xuat rieng" fill className="object-contain" />
                       {/* Div màu nằm ở góc phải dưới */}
@@ -198,10 +201,15 @@ export default function Page() {
                       <h3 className="text-[24px] sm:text-[28px] md:text-[36px] font-medium uppercase">Xưởng sản xuất riêng</h3>
                       <p className="text-md font-normal">Chúng tôi cam kết đảm bảo chất lượng từ nguyên liệu đến thành phẩm.</p>
                     </div>
-                  </div>
+                  </motion.div>
 
                   {/* Item 2 */}
-                  <div className="flex flex-col lg:flex-row-reverse items-center gap-8 px-6 lg:px-[60px]">
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col lg:flex-row-reverse items-center gap-8 px-6 lg:px-[60px]">
                     <div className="w-full xl:w-1/2 md:w-[00px] h-[300px] xl:h-[500px] lg:h-[300px] md:h-[280px] relative max-w-[500px]">
                       <Image src={"/home/homepage_sec_3_2.png"} alt="Vat lieu cao cap" fill className="object-contain" />
                       <div className="absolute bottom-4 left-4 lg:bottom-[25px] lg:-left-[25px] translate-y-1/2 p-4 text-white w-[150px] h-[150px] lg:w-[200px] lg:h-[200px] -z-1">
@@ -212,10 +220,15 @@ export default function Page() {
                       <h3 className="text-[24px] sm:text-[28px] md:text-[36px] font-medium uppercase">Vật liệu cao cấp</h3>
                       <p className="text-md font-normal">Gỗ tự nhiên, gỗ công nghiệp xử lý chống cong vênh, mối mọt. Sản phẩm được bền đẹp theo thời gian</p>
                     </div>
-                  </div>
+                  </motion.div>
 
                   {/* Item 3 */}
-                  <div className="flex flex-col lg:flex-row items-center gap-8 px-6 lg:px-[60px]">
+                  <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col lg:flex-row items-center gap-8 px-6 lg:px-[60px]">
                     <div className="w-full xl:w-1/2 md:w-[00px] h-[300px] xl:h-[500px] lg:h-[300px] md:h-[280px] relative max-w-[500px]">
                       <Image src={"/home/homepage_sec_3_3.png"} alt="Doi ngu tho" fill className="object-contain" />
                       <div className="absolute bottom-4 -right-0 lg:bottom-[25px] lg:-right-[25px] translate-y-1/2 bg-[#142927] p-4 text-white w-[60px] h-[60px] lg:w-[80px] lg:h-[80px]">
@@ -228,7 +241,7 @@ export default function Page() {
                         Đội ngũ thi công của Goox có nhiều năm kinh nghiệm, thi công thủ công tỉ mỉ, kết hợp với máy móc hiện đại để đảm bảo độ chính xác và thẩm mỹ cho từng dự án
                       </p>
                     </div>
-                  </div>
+                  </motion.div>
                 </div>
               </div>
 

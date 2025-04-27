@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* reset.scss */
 /* 1. Box sizing rules */
 *,
@@ -144,6 +145,11 @@ table {
 }
 .bg-primary:hover {
   background: #283C3A !important;
+}
+
+/* Thêm vào globals.css */
+.swiper-zoom-container {
+  height: 100%;
 }
 
 /**
