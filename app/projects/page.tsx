@@ -85,7 +85,7 @@ const Page = () => {
                 <div className="h-[450px] relative">
                   <Image src={"/projects/project_3.png"} fill alt="img" />
                 </div>
-                <p>Khu bếp nối liền phòng ăn là nơi phản chiếu đúng tinh thần "ít mà chất". Tủ bếp làm từ gỗ sồi sơn mờ, mặt đá trắng vân mây và hệ đèn thả ánh vàng ấm</p>
+                <p>Khu bếp nối liền phòng ăn là nơi phản chiếu đúng tinh thần &quot;ít mà chất&quot;. Tủ bếp làm từ gỗ sồi sơn mờ, mặt đá trắng vân mây và hệ đèn thả ánh vàng ấm</p>
               </div>
             </div>
 
