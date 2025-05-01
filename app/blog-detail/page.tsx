@@ -25,7 +25,7 @@ const Page = () => {
   return (
     <AOSProvider>
       <div className="max-w-[1240px] mx-auto mt-[80px] px-[32px] lg:px-0">
-        <section className="mb-[32px] lg:mb-[56px] md:mb-[40px]" >
+        <section className="mb-[32px] lg:mb-[56px] md:mb-[40px]">
           <div className="mx-auto max-w-[1240px]">
             {/* Breadcrumb */}
             <div className="text-xs md:text-sm text-gray-500 flex gap-[12px] mb-[20px]">
@@ -38,8 +38,7 @@ const Page = () => {
           </div>
         </section>
 
-        <div className="flex lg:flex-row gap-8 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up"
-     data-aos-duration="1000">
+        <div className="flex lg:flex-row gap-8 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           {/* Left nội dung */}
           <div className="w-full lg:w-[70%] flex flex-col">
             <div className="flex  lg:flex-row mb-4 gap-4">
@@ -69,8 +68,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between border-b border-b-[#B9B9B9] pb-16 flex-col lg:flex-row mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up"
-     data-aos-duration="1000">
+        <div className="flex items-center justify-between border-b border-b-[#B9B9B9] pb-16 flex-col lg:flex-row mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           <div className="max-w-full lg:max-w-[500px] w-full mb-8 lg:mb-0 lg:mr-[100px]">
             <h3 className="text-[32px] sm:text-[40px] font-bold mb-2 leading-[40px]">
               Gỗ organic & <br />
@@ -86,8 +84,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between border-b border-b-[#B9B9B9] pb-16 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up"
-     data-aos-duration="1000">
+        <div className="flex flex-col lg:flex-row items-center justify-between border-b border-b-[#B9B9B9] pb-16 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           {/* Left Section */}
           <div className="max-w-full lg:max-w-[500px] w-full lg:mr-[100px] mb-[24px]">
             <h3 className="text-[32px] sm:text-[40px] font-bold mb-2 leading-[46px] uppercase">
@@ -106,8 +103,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between border-b border-b-[#B9B9B9] pb-16 mb-[60px]" data-aos="fade-up"
-     data-aos-duration="1000">
+        <div className="flex flex-col justify-between border-b border-b-[#B9B9B9] pb-16 mb-[60px]" data-aos="fade-up" data-aos-duration="1000">
           {/* Section with Title and Text */}
           <div className="flex lg:flex-col sm:flex-col items-start sm:items-center justify-between w-full mb-[40px]">
             <h3 className="text-[32px] sm:text-[40px] font-bold mb-2 leading-[46px] sm:mr-4 max-w-full lg:max-w-[500px]">TỐI GIẢN, NHƯNG KHÔNG RỖNG TUẾCH</h3>
@@ -127,8 +123,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="border-b border-[#B9B9B9] pt-16 pb-[100px] mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up"
-     data-aos-duration="1000">
+        <div className="border-b border-[#B9B9B9] pt-16 pb-[100px] mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           <div className="max-w-[1058px] mx-auto flex items-center justify-center relative h-[524px] px-4 relative">
             {/* Text bên trái */}
             <h3 className="absolute top-0 lg:top-1/2 -translate-y-1/2 left-0 text-[32px] sm:text-[40px] font-medium leading-[46px] max-w-[420px] z-11">
@@ -160,8 +155,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between border-b border-b-[#B9B9B9] pb-16 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up"
-     data-aos-duration="1000">
+        <div className="flex flex-col lg:flex-row items-center justify-between border-b border-b-[#B9B9B9] pb-16 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           {/* Text Content */}
           <div className="max-w-full lg:max-w-[500px] w-full mb-8 lg:mb-0 lg:mr-[100px]">
             <h3 className="text-[28px] sm:text-[32px] lg:text-[40px] font-medium mb-2 leading-[40px]">MÀU CỦA CẢM XÚC TĨNH</h3>
@@ -177,8 +171,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="max-w-[1440px] mx-auto pb-16 mb-8" data-aos="fade-up"
-     data-aos-duration="1000">
+        <div className="max-w-[1440px] mx-auto pb-16 mb-8" data-aos="fade-up" data-aos-duration="1000">
           <div className="flex justify-between items-center mb-2">
             <h2 className="text-3xl sm:text-[56px] font-bold">BÀI VIẾT</h2>
             <a href="#" className="text-base font-medium flex items-center gap-2">
@@ -216,7 +209,11 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <ContactHome />
+      <div className="section bg-[#EEEBE5]">
+        <div className="max-w-[1240px] mx-auto">
+          <ContactHome />
+        </div>
+      </div>
     </AOSProvider>
   );
 };

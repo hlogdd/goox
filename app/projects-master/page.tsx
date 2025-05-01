@@ -7,6 +7,7 @@ import type { SwiperRef } from "swiper/react"; // 👈 SwiperRef wrapper
 import "swiper/css";
 import Image from "next/image";
 import Link from "next/link";
+import { Mousewheel } from "swiper/modules";
 
 const slides = [
   {
@@ -133,6 +134,8 @@ export default function VerticalImageSlider() {
                 1280: { slidesPerView: 1.5 },
                 1536: { slidesPerView: 1.5 },
               }}
+              modules={[Mousewheel]} // 👈 Thêm dòng này
+              mousewheel={{ forceToAxis: true }} // 👈 Kích hoạt scroll chuột
               centeredSlides
               loop
               onSlideChange={handleSlideChange}

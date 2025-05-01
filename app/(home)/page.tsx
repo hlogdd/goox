@@ -263,7 +263,9 @@ export default function Page() {
               </div>
 
               <div className="section h-screen bg-[#EEEBE5]">
-                <ContactHome />
+              <div className="section__container">
+              <ContactHome />
+                </div>
               </div>
 
               <div className="section min-h-screen">

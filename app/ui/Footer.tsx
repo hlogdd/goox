@@ -75,7 +75,7 @@ export default function Footer() {
 
       {pathname === "/" && (
           <div className="w-full h-[50%] 2xl:h-[calc(100vh-240px)] md:h-[50%] absolute left-0 bottom-0">
-            <Image src="/home/background_footer.png" fill alt="background" className="object-cover 2xl:object-contain"/>
+            <Image src="/home/background_footer.png" fill alt="background" className="object-cover"/>
           </div>
         )}
     </footer>

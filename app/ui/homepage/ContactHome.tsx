@@ -52,9 +52,9 @@ const ContactHome = () => {
             </div>
 
             {/* Nút gửi */}
-            <button className="text-white py-3 px-6 transition bg-primary !font-bold">
-              <Link href="/thanks"> Liên hệ chúng tôi</Link>
-            </button>
+            <div className="text-center text-white py-3 px-6 transition bg-primary !font-bold">
+              <Link href="/thanks" className="flex justify-center"> Liên hệ chúng tôi</Link>
+            </div>
           </form>
         </div>
 
