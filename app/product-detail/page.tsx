@@ -3,7 +3,6 @@
 
 import Image from "next/image";
 import React, { useEffect } from "react";
-import ProductList from "../ui/homepage/ProductList";
 import ContactHome from "../ui/homepage/ContactHome";
 import { removeInlineStylesFromMain } from "../lib/function";
 import ProductSimilar from "../ui/product-detail/ProductSimilar";

@@ -2,10 +2,8 @@
 
 "use client";
 
-import Image from "next/image";
 import React, { useEffect, useRef } from "react";
 import Accordion from "../ui/homepage/Accordion";
-import ProductList from "../ui/homepage/ProductList";
 import ProjectHighlight from "../ui/homepage/ProjectHighlight";
 import ContactHome from "../ui/homepage/ContactHome";
 import { removeInlineStylesFromMain } from "../lib/function";

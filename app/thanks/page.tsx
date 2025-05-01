@@ -2,9 +2,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import Banner from "../ui/projects/Banner";
 import Image from "next/image";
-import ContactHome from "../ui/homepage/ContactHome";
 import { removeInlineStylesFromMain } from "../lib/function";
 import AOSProvider from "../ui/AOSProviders";
 
