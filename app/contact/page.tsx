@@ -22,7 +22,7 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="section pt-10 pb-16 sm:pt-14 sm:pb-20 md:pt-[80px] md:pb-[120px]">
+    <div className="section pt-10">
       <ContactHome />
     </div>
   );

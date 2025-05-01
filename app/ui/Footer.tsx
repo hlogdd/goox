@@ -23,13 +23,13 @@ export default function Footer() {
         {/* Cột 1 - Logo + Thông tin */}
         <div className="max-w-[250px] w-full">
           <h2 className="text-[36px] font-black mb-3 text-[#EEEBE5]">goox</h2>
-          <p className="text-md mb-1 text-[#EEEBE5]">
+          <p className="text-md mb-1 text-[#EEEBE5]  !text-white">
             Hotline:{" "}
             <a href="tel:+8421345299752" className="hover:underline">
               +84 21345299752
             </a>
           </p>
-          <p className="text-md text-[#EEEBE5]">
+          <p className="text-md text-[#EEEBE5]  !text-white">
             Email:{" "}
             <a href="mailto:Goox@goox.com" className="hover:underline">
               Goox@goox.com
@@ -44,7 +44,7 @@ export default function Footer() {
             <p className="min-h-[12px]"></p>
             {navItems.slice(0, 3).map((item) => (
               <Link key={item.label} href={item.href}>
-                <p className="mb-[16px] hover:underline cursor-pointer">{item.label}</p>
+                <p className="mb-[16px] hover:underline cursor-pointer !text-white">{item.label}</p>
               </Link>
             ))}
           </div>
@@ -54,7 +54,7 @@ export default function Footer() {
             <p className="min-h-[12px]"></p>
             {navItems.slice(3, 6).map((item) => (
               <Link key={item.label} href={item.href}>
-                <p className="mb-[16px] hover:underline cursor-pointer">{item.label}</p>
+                <p className="mb-[16px] hover:underline cursor-pointer !text-white">{item.label}</p>
               </Link>
             ))}
           </div>

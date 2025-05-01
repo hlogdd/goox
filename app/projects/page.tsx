@@ -50,7 +50,7 @@ const Page = () => {
             </div>
 
             {/* Ảnh bên dưới */}
-            <div className="w-full overflow-hidden" data-aos="zoom-in" data-aos-delay="300">
+            <div className="w-full overflow-hidden" data-aos="fade-up" data-aos-delay="300">
               <Image
                 src="/projects/project_1.png"
                 alt="Kitchen"
@@ -65,7 +65,7 @@ const Page = () => {
         <section>
           <div className="section__container">
             {/* Phần đầu: Grid 2 cột */}
-            <div className="flex justify-center gap-8 md:gap-[240px] py-12 md:py-[58px] px-4 md:px-[100px]">
+            <div className="flex justify-center gap-8 gap-[56px] lg:gap-[240px] md:gap-[32px] py-12 lg:py-[58px] md:py-[28px] px-0 lg:px-[100px] md:px-[0px]">
               <div 
                 className="item flex flex-col gap-4 max-w-[400px] mt-6 md:mt-[86px]" 
                 data-aos="fade-up"
@@ -117,7 +117,7 @@ const Page = () => {
 
             {/* Phần Grid 2 cột khác */}
             <div className="flex flex-wrap mb-[30px]">
-              <div className="flex justify-center gap-8 md:gap-[240px] py-12 md:py-[58px] w-full px-4 md:px-[100px]">
+              <div className="flex justify-center gap-8 gap-[56px] lg:gap-[240px] md:gap-[32px] py-12 lg:py-[58px] md:py-[28px] w-full px-0 lg:px-[100px] md:px-[0px]">
                 <div 
                   className="item flex flex-col gap-4 w-full max-w-[400px] mt-6 md:mt-[86px]" 
                   data-aos="zoom-in"

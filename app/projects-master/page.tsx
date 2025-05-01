@@ -35,7 +35,43 @@ const slides = [
   },
   {
     id: 5,
-    image: "/projects/project_bg_5.png",
+    image: "/projects/project_bg_4.png",
+    title: "CLASSIC / NEOCLASSIC",
+    description: "Vẻ đẹp cổ điển kết hợp với nét hiện đại",
+  },
+  {
+    id: 6,
+    image: "/projects/project_bg_1.png",
+    title: "MINIMALISM",
+    description: "Phong cách tối giản với đường nét gọn gàng và không gian mở",
+  },
+  {
+    id: 7,
+    image: "/projects/project_bg_2.png",
+    title: "CLASSIC / NEOCLASSIC",
+    description: "Vẻ đẹp cổ điển kết hợp với nét hiện đại",
+  },
+  {
+    id: 8,
+    image: "/projects/project_bg_3.png",
+    title: "MODERN",
+    description: "Phong cách hiện đại với vật liệu mới và công năng tối ưu",
+  },
+  {
+    id: 9,
+    image: "/projects/project_bg_4.png",
+    title: "MINIMALISM",
+    description: "Phong cách tối giản với đường nét gọn gàng và không gian mở",
+  },
+  {
+    id: 10,
+    image: "/projects/project_bg_4.png",
+    title: "CLASSIC / NEOCLASSIC",
+    description: "Vẻ đẹp cổ điển kết hợp với nét hiện đại",
+  },
+  {
+    id: 11,
+    image: "/projects/project_bg_4.png",
     title: "CLASSIC / NEOCLASSIC",
     description: "Vẻ đẹp cổ điển kết hợp với nét hiện đại",
   },
@@ -52,11 +88,11 @@ export default function VerticalImageSlider() {
   return (
     <section className="section h-screen">
       <div className="section__container mx-auto px-4 h-full">
-        <div className="flex flex-col lg:flex-row gap-8 h-full">
+        <div className="flex lg:flex-row gap-8 h-full">
           {/* Left side */}
-          <div className="w-full max-w-[400px] h-full flex flex-col pb-12">
+          <div className="w-full max-w-[110px] md:max-w-[220px] lg:max-w-[400px] h-full flex flex-col pb-12">
             <div className="flex-1 flex flex-col justify-center">
-              <h2 className="text-[56px] leading-[56px] font-medium">
+              <h2 className="text-[16px] md:text-[28px] lg:text-[56px] leading-[56px] font-medium">
                 {slides[activeIndex].title}
               </h2>
             </div>
@@ -88,6 +124,15 @@ export default function VerticalImageSlider() {
               speed={800}
               spaceBetween={0}
               slidesPerView={1.5}
+              breakpoints={{
+                0: { slidesPerView: 4.5 },
+                480: { slidesPerView: 6.5 },
+                640: { slidesPerView: 5.5 },
+                768: { slidesPerView: 4.5 },
+                1024: { slidesPerView: 1.5 },
+                1280: { slidesPerView: 1.5 },
+                1536: { slidesPerView: 1.5 },
+              }}
               centeredSlides
               loop
               onSlideChange={handleSlideChange}

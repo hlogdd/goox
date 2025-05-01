@@ -81,6 +81,10 @@ table {
   border-spacing: 0;
 }
 
+p {
+  color: #414141;
+}
+
 /** @format */
 :root {
   --background: #ffffff;
@@ -119,17 +123,11 @@ table {
 }
 @media (min-width: 640px) {
   .section__container {
-    padding-left: 24px;
-    padding-right: 24px;
+    padding-left: 32px;
+    padding-right: 32px;
   }
 }
-@media (min-width: 768px) {
-  .section__container {
-    padding-left: 48px;
-    padding-right: 48px;
-  }
-}
-@media (min-width: 1024px) {
+@media (min-width: 1280px) {
   .section__container {
     padding-left: 104px;
     padding-right: 104px;

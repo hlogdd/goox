@@ -10,18 +10,17 @@ import { removeInlineStylesFromMain } from "../lib/function";
 import Link from "next/link";
 
 const Page = () => {
+  useEffect(() => {
+    removeInlineStylesFromMain();
 
-   useEffect(() => {
-      removeInlineStylesFromMain();
-  
-      // Chạy 1 lần duy nhất khi component được render lần đầu
-      console.log('Chạy một lần duy nhất');
-  
-      // Optional: cleanup function
-      return () => {
-        console.log('Component bị unmount');
-      };
-    }, []);
+    // Chạy 1 lần duy nhất khi component được render lần đầu
+    console.log("Chạy một lần duy nhất");
+
+    // Optional: cleanup function
+    return () => {
+      console.log("Component bị unmount");
+    };
+  }, []);
 
   const blogPosts = [
     {
@@ -69,66 +68,6 @@ const Page = () => {
       title: "Chọn đèn trang trí: Phong cách và công năng trong không gian sống",
       date: "23/06/2025",
     },
-    {
-      image: "/blogs/010.png",
-      title: "Thảm trải sàn: Lựa chọn và cách bố trí phù hợp cho từng phòng",
-      date: "24/06/2025",
-    },
-    {
-      image: "/blogs/011.png",
-      title: "Thiết kế phòng bếp: Tối ưu hóa không gian và công năng sử dụng",
-      date: "25/06/2025",
-    },
-    {
-      image: "/blogs/012.png",
-      title: "Phòng ngủ thư giãn: Cách bày trí để nâng cao chất lượng giấc ngủ",
-      date: "26/06/2025",
-    },
-    {
-      image: "/blogs/013.png",
-      title: "Phong cách Japandi: Sự hòa quyện giữa Nhật và Bắc Âu",
-      date: "27/06/2025",
-    },
-    {
-      image: "/blogs/014.png",
-      title: "Tường ốp gỗ: Biến không gian trở nên ấm cúng và sang trọng",
-      date: "28/06/2025",
-    },
-    {
-      image: "/blogs/015.png",
-      title: "Sàn gỗ tự nhiên: Ưu điểm và cách bảo quản đúng cách",
-      date: "29/06/2025",
-    },
-    {
-      image: "/blogs/016.png",
-      title: "Kệ treo tường: Tối ưu hóa không gian nhỏ",
-      date: "30/06/2025",
-    },
-    {
-      image: "/blogs/017.png",
-      title: "Bố trí ánh sáng tự nhiên trong căn hộ hiện đại",
-      date: "01/07/2025",
-    },
-    {
-      image: "/blogs/018.png",
-      title: "Thiết kế góc làm việc tại nhà: Nhỏ gọn mà hiệu quả",
-      date: "02/07/2025",
-    },
-    {
-      image: "/blogs/019.png",
-      title: "Màu sắc trung tính: Sự lựa chọn an toàn và tinh tế",
-      date: "03/07/2025",
-    },
-    {
-      image: "/blogs/020.png",
-      title: "Nội thất tối giản: Nghệ thuật của sự tinh gọn",
-      date: "04/07/2025",
-    },
-    {
-      image: "/blogs/021.png",
-      title: "Tủ âm tường: Giải pháp lưu trữ thông minh cho nhà hiện đại",
-      date: "05/07/2025",
-    },
   ];
 
   const [showAll, setShowAll] = useState(false);
@@ -136,27 +75,30 @@ const Page = () => {
   const visiblePosts = showAll ? blogPosts : blogPosts.slice(0, 6);
 
   return (
-    <section className="py-16 pt-10">
+    <section className="py-16 pt-[80px]">
       <div className="section__container mx-auto px-4">
         {/* Breadcrumb */}
-        <div className="text-sm text-gray-500 mb-2">
-          <span className="text-gray-400">Trang chủ</span> / <span className="text-black font-medium">Blog</span>
+        <div className="text-sm text-gray-500 mb-2 flex gap-[12px]">
+          <span className="text-[#9D9D9D]">Trang chủ</span> / <span className="text-[#1D1D1D] font-normal">Blog</span>
         </div>
 
         {/* Tiêu đề + mô tả */}
         <h2 className="text-[56px] font-bold mb-2">BLOG</h2>
-        <p className="text-gray-600 mb-8 max-w-3xl">Nơi chúng tôi lưu giữ và chia sẻ những cảm hứng sống tinh tế, từ chất liệu gỗ tự nhiên đến những xu hướng thiết kế đương đại.</p>
+        <p className="text-[#141414] mb-8 max-w-3xl">Nơi chúng tôi lưu giữ và chia sẻ những cảm hứng sống tinh tế, từ chất liệu gỗ tự nhiên đến những xu hướng thiết kế đương đại.</p>
 
         {/* Grid bài viết */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
           {visiblePosts.map((post, index) => (
             <Link key={index} href={`/blog-detail`} className="flex flex-col gap-3 cursor-pointer">
-              <div className="relative w-full aspect-[4/3] overflow-hidden">
+              <div className="relative w-full aspect-[5/3] overflow-hidden">
                 <Image src={post.image} alt={post.title} fill className="object-cover" />
               </div>
-              <div>
-                <p className="text-sm text-[#414141]">{post.date}</p>
-                <h3 className="text-md font-medium">{post.title}</h3>
+              <div className="flex items-center justify-between pb-4 border-b border-b-[#8F8F8F]">
+                <div className="max-w-[300px] w-full">
+                  <p className="text-sm text-[#414141] mb-1">{post.date}</p>
+                  <h3 className="text-md font-medium text-black leading-[18px]">{post.title}</h3>
+                </div>
+                <Image src="/product/icon_arrow_up_black.svg" alt="icon" width={20} height={20} className="object-contain sepia-0" />
               </div>
             </Link>
           ))}
@@ -164,9 +106,10 @@ const Page = () => {
 
         {/* Nút xem thêm */}
         {!showAll && (
-          <div className="text-center mt-8">
-            <button onClick={() => setShowAll(true)} className="px-6 py-3 !font-bold text-white transition-all bg-primary">
+          <div className="text-center mt-8 flex justify-center">
+            <button onClick={() => setShowAll(true)} className="px-6 py-3 !font-bold text-white transition-all bg-primary flex items-center gap-2">
               Xem thêm
+              <Image src="/product/icon_arrow_up.svg" alt="icon" width={20} height={20} className="object-contain" />
             </button>
           </div>
         )}

@@ -61,7 +61,7 @@ export default function Accordion() {
               <span className="text-gray-500 text-[28px] sm:text-[32px] mb-2 sm:mb-0">
                 /{String(idx + 1).padStart(2, "0")}
               </span>
-              <h3 className="ml-0 sm:ml-[180px] font-semibold text-[28px] sm:text-[40px] flex-1 text-center sm:text-left">
+              <h3 className="ml-0 xl:ml-[180px] md:ml-[80px] sm:ml-[20px] font-semibold text-[22px] xl:text-[40px] md:text-[30px] sm:text-[28px] flex-1 text-center sm:text-left">
                 {item.title}
               </h3>
               <span className="text-[24px] sm:text-[28px]">{openIndex === idx ? "−" : "+"}</span>

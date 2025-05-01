@@ -18,11 +18,11 @@ export default function ProductHighlight({
   ctaText = "XEM BỘ SƯU TẬP",
 }: ProductHighlightProps) {
   return (
-    <section className="w-full py-6 px-4 sm:py-8 md:py-12 md:px-16">
+    <section className="w-full pb-6 sm:pb-8 md:pb-12">
       <div
         className={`flex flex-col md:flex-row ${
           reverse ? "md:flex-row-reverse" : ""
-        } gap-8 items-center`}
+        } gap-5 2xl:gap-[100px] md:gap-8 items-center`}
       >
         <div className="relative w-full md:w-1/2 h-64 sm:h-80 md:h-[500px] lg:h-[600px]">
           <Image
@@ -34,11 +34,12 @@ export default function ProductHighlight({
             priority
           />
         </div>
-        <div className="md:w-1/2 space-y-4 text-center md:text-left">
-          <h2 className="text-3xl sm:text-4xl font-bold">{title}</h2>
+        <div className="md:w-full max-w-full px-6 text-left lg:max-w-[425px] space-y-2 lg:space-y-4 lg:text-center md:text-left">
+          <h2 className="text-[56px] leading-[65px] font-medium">{title}</h2>
           <p className="text-gray-600 text-sm sm:text-base">{description}</p>
-          <button className="mt-4 px-5 py-2 bg-black text-white font-bold hover:bg-neutral-800 transition-all">
+          <button className="mt-4 px-5 py-3 flex items-center gap-2 bg-primary text-white !font-bold transition-all">
             {ctaText}
+            <Image src={"/product/icon_arrow_up.svg"} width={20} height={20} alt="icon"/>
           </button>
         </div>
       </div>

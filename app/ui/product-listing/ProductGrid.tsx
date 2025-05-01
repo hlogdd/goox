@@ -53,17 +53,21 @@ export default function ProductSlider({ title, products }: Props) {
   }, []);
 
   return (
-    <section className="py-6 px-4 sm:py-8 sm:px-6 md:py-12 md:px-16">
-      <h2 className="text-2xl md:text-3xl font-bold mb-6">{title}</h2>
+    <section className="pl-[32px] lg:pl-[100px] mb-[56px] lg:mb-[100px]">
+      <h2 className="text-2xl md:text-[32px] font-medium mb-6">{title}</h2>
 
       <Swiper
         modules={[Navigation]}
-        spaceBetween={20}
+        spaceBetween={30}
         slidesPerView={1.2}
         breakpoints={{
           640: { slidesPerView: 2.2 },
           768: { slidesPerView: 3.2 },
           1024: { slidesPerView: 4.2 },
+          1224: { slidesPerView: 5.2 },
+          1536: { slidesPerView: 6.2 },
+          1780: { slidesPerView: 7.2 },
+          1920: { slidesPerView: 8.2 },
         }}
         navigation
         onSwiper={(swiper) => {
@@ -71,32 +75,22 @@ export default function ProductSlider({ title, products }: Props) {
           calculateProgress(); // Initialize progress when swiper is set up
         }}
         onSlideChange={calculateProgress} // Recalculate progress on slide change
-        className="!pb-10"
-      >
+        className="!pb-10">
         {products.map((product) => (
           <SwiperSlide key={product.id}>
             <div className="border-transparent hover:border-blue-400 transition">
-              <Link href="/product-detail" className="text-2xl font-bold text-gray-900">
-                <Image
-                  src={product.image}
-                  alt={product.name}
-                  width={400}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                />
+              <Link href="/product-detail" className="flex max-w-[288px] h-[350px] relative">
+                <Image src={product.image} alt={product.name} fill className="object-cover" />
               </Link>
-              <p className="text-center mt-2 text-sm font-medium text-neutral-800">{product.name}</p>
+              <p className="text-center mt-2 text-md font-medium text-[#414141]">{product.name}</p>
             </div>
           </SwiperSlide>
         ))}
       </Swiper>
 
       {/* Custom progress bar */}
-      <div className="mt-[-22px] w-full h-[4px] bg-neutral-200 rounded-full overflow-hidden">
-        <div
-          className="h-full bg-[#00332E] transition-all duration-300"
-          style={{ width: `${progress}%` }}
-        />
+      <div className="mt-[-22px] max-w-[500px] w-full h-[4px] bg-neutral-200 rounded-full overflow-hidden">
+        <div className="h-full bg-[#00332E] transition-all duration-300" style={{ width: `${progress}%` }} />
       </div>
     </section>
   );
