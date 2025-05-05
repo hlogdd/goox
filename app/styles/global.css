@@ -127,6 +127,7 @@ p {
     padding-right: 32px;
   }
 }
+
 @media (min-width: 1280px) {
   .section__container {
     padding-left: 104px;

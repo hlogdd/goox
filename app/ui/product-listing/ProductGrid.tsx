@@ -58,7 +58,7 @@ export default function ProductSlider({ title, products }: Props) {
 
       <Swiper
         modules={[Navigation]}
-        spaceBetween={30}
+        spaceBetween={10}
         slidesPerView={1.2}
         breakpoints={{
           640: { slidesPerView: 2.2 },

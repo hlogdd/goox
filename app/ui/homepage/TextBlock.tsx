@@ -26,7 +26,7 @@ export const TextBlock: React.FC<TextBlockProps> = ({ content, col, row, type = 
     {type === "title" ? (
       <h1 className={`text-[32px] md:text-[48px] lg:text-[64px] font-bold text-gray-800 ${className}`}>{content}</h1>
     ) : (
-      <p className={`text-[20px] md:text-[28px] lg:text-[32px] whitespace-pre-line text-justify leading-[32px] ${className}`}>{content}</p>
+      <p className={`text-[20px] md:text-[28px] lg:text-[32px] whitespace-pre-line text-left lg:text-justify leading-[20px] lg:leading-[32px] ${className}`}>{content}</p>
     )}
   </motion.div>
 );

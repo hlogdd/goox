@@ -34,8 +34,8 @@ export default function ProductHighlight({
             priority
           />
         </div>
-        <div className="md:w-full max-w-full px-6 text-left lg:max-w-[425px] space-y-2 lg:space-y-4 lg:text-center md:text-left">
-          <h2 className="text-[56px] leading-[65px] font-medium">{title}</h2>
+        <div className="md:w-full max-w-full px-6 text-left lg:max-w-[425px] space-y-2 lg:space-y-4 lg:text-left md:text-left">
+          <h2 className="text-[32px] lg:text-[56px] leading-[32px] lg:leading-[65px] font-medium">{title}</h2>
           <p className="text-gray-600 text-sm sm:text-base">{description}</p>
           <button className="mt-4 px-5 py-3 flex items-center gap-2 bg-primary text-white !font-bold transition-all">
             {ctaText}

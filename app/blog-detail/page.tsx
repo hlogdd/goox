@@ -33,7 +33,7 @@ const Page = () => {
             </div>
 
             {/* Tiêu đề + mô tả */}
-            <h2 className="text-[28px] md:text-[40px] font-medium leading-[40px] max-w-[600px]">PHONG CÁCH THIẾT KẾ NỘI THẤT SANG XỊN MỊN NHẤT NĂM 2025</h2>
+            <h2 className="text-[28px] md:text-[40px] font-medium leading-[28px] lg:leading-[24px] lg:leading-[40px] max-w-[600px]">PHONG CÁCH THIẾT KẾ NỘI THẤT SANG XỊN MỊN NHẤT NĂM 2025</h2>
             <p className="text-sm">16/06/2025</p>
           </div>
         </section>
@@ -41,8 +41,8 @@ const Page = () => {
         <div className="flex lg:flex-row gap-8 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           {/* Left nội dung */}
           <div className="w-full lg:w-[70%] flex flex-col">
-            <div className="flex  lg:flex-row mb-4 gap-4">
-              <h3 className="text-[36px] md:text-[46px] lg:text-[56px] leading-[40px] lg:leading-[56px] flex-1">
+            <div className="flex flex-col lg:flex-row mb-4 gap-4">
+              <h3 className="text-[36px] md:text-[46px] lg:text-[56px] leading-[24px] lg:leading-[40px] lg:leading-[56px] flex-1">
                 STORYTELLING <br /> ORGANICMODERN
               </h3>
 
@@ -55,7 +55,7 @@ const Page = () => {
               <Image src={"/blogs/blog_detail_02.png"} fill alt="img" className="object-cover" />
             </div>
 
-            <h3 className="text-[36px] lg:text-[56px] leading-[40px] lg:leading-[56px] mt-4 uppercase">
+            <h3 className="text-[36px] lg:text-[56px] leading-[24px] lg:leading-[40px] lg:leading-[56px] mt-4 uppercase">
               ELEVATED SIMPLICITY <br /> Architectural furniture
             </h3>
           </div>
@@ -70,7 +70,7 @@ const Page = () => {
 
         <div className="flex items-center justify-between border-b border-b-[#B9B9B9] pb-16 flex-col lg:flex-row mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           <div className="max-w-full lg:max-w-[500px] w-full mb-8 lg:mb-0 lg:mr-[100px]">
-            <h3 className="text-[32px] sm:text-[40px] font-bold mb-2 leading-[40px]">
+            <h3 className="text-[24px] sm:text-[40px] font-bold mb-2 leading-[24px] lg:leading-[40px]">
               Gỗ organic & <br />
               những bề mặt thô mộc
             </h3>
@@ -87,7 +87,7 @@ const Page = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between border-b border-b-[#B9B9B9] pb-16 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           {/* Left Section */}
           <div className="max-w-full lg:max-w-[500px] w-full lg:mr-[100px] mb-[24px]">
-            <h3 className="text-[32px] sm:text-[40px] font-bold mb-2 leading-[46px] uppercase">
+            <h3 className="text-[24px] sm:text-[40px] font-bold mb-2 leading-[28px] lg:leading-[46px] uppercase">
               Màu beige, đen mờ, và <br /> tone đất cháy
             </h3>
 
@@ -96,17 +96,17 @@ const Page = () => {
 
           {/* Right Section */}
           <div className="flex flex-col gap-[20px] w-full flex-1">
-            <div className="item text-[24px] sm:text-[28px] font-medium pb-4 border-b border-b-[#8F8F8F]">CLAY - CẢM GIÁC CỦA NẮNG CHIỀU</div>
-            <div className="item text-[24px] sm:text-[28px] font-medium pb-4 border-b border-b-[#8F8F8F]">CLAY - CẢM GIÁC CỦA NẮNG CHIỀU</div>
-            <div className="item text-[24px] sm:text-[28px] font-medium pb-4 border-b border-b-[#8F8F8F]">CLAY - CẢM GIÁC CỦA NẮNG CHIỀU</div>
-            <div className="item text-[24px] sm:text-[28px] font-medium pb-4 border-b border-b-[#8F8F8F]">CLAY - CẢM GIÁC CỦA NẮNG CHIỀU</div>
+            <div className="item text-[20px] sm:text-[28px] font-medium pb-4 border-b border-b-[#8F8F8F]">CLAY - CẢM GIÁC CỦA NẮNG CHIỀU</div>
+            <div className="item text-[20px] sm:text-[28px] font-medium pb-4 border-b border-b-[#8F8F8F]">CLAY - CẢM GIÁC CỦA NẮNG CHIỀU</div>
+            <div className="item text-[20px] sm:text-[28px] font-medium pb-4 border-b border-b-[#8F8F8F]">CLAY - CẢM GIÁC CỦA NẮNG CHIỀU</div>
+            <div className="item text-[20px] sm:text-[28px] font-medium pb-4 border-b border-b-[#8F8F8F]">CLAY - CẢM GIÁC CỦA NẮNG CHIỀU</div>
           </div>
         </div>
 
         <div className="flex flex-col justify-between border-b border-b-[#B9B9B9] pb-16 mb-[60px]" data-aos="fade-up" data-aos-duration="1000">
           {/* Section with Title and Text */}
-          <div className="flex lg:flex-col sm:flex-col items-start sm:items-center justify-between w-full mb-[40px]">
-            <h3 className="text-[32px] sm:text-[40px] font-bold mb-2 leading-[46px] sm:mr-4 max-w-full lg:max-w-[500px]">TỐI GIẢN, NHƯNG KHÔNG RỖNG TUẾCH</h3>
+          <div className="flex flex-col lg:flex-row items-start sm:items-center justify-between w-full mb-[40px]">
+            <h3 className="text-[24px] sm:text-[40px] font-bold mb-2 leading-[28px] lg:leading-[46px] sm:mr-4 max-w-full lg:max-w-[500px]">TỐI GIẢN, NHƯNG KHÔNG RỖNG TUẾCH</h3>
 
             <p className="text-base sm:text-md max-w-full lg:max-w-[400px] flex-1">
               Bảng màu 2025 không phô trương. Nó gợi cảm giác ấm, trầm, và gần gũi như một làn khói cafe buổi sớm. Đẹp theo cách im lặng.
@@ -126,7 +126,7 @@ const Page = () => {
         <div className="border-b border-[#B9B9B9] pt-16 pb-[100px] mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           <div className="max-w-[1058px] mx-auto flex items-center justify-center relative h-[524px] px-4 relative">
             {/* Text bên trái */}
-            <h3 className="absolute top-0 lg:top-1/2 -translate-y-1/2 left-0 text-[32px] sm:text-[40px] font-medium leading-[46px] max-w-[420px] z-11">
+            <h3 className="absolute top-0 lg:top-1/2 -translate-y-1/2 left-0 text-[24px] sm:text-[40px] font-medium leading-[28px] lg:leading-[46px] max-w-[420px] z-11">
               Tất cả mềm mại như
               <br />
               một dòng chảy.
@@ -146,7 +146,7 @@ const Page = () => {
             </div>
 
             {/* Text bên phải */}
-            <h3 className="absolute top-full lg:top-1/2 -translate-y-1/2 right-0 text-[32px] sm:text-[40px] font-medium leading-[46px] max-w-[420px] text-left z-11">
+            <h3 className="absolute top-full lg:top-1/2 -translate-y-1/2 right-0 text-[24px] sm:text-[40px] font-medium leading-[28px] lg:leading-[46px] max-w-[420px] text-left z-11">
               Gợi nhắc về cơ thể –<br />
               về chuyển động – về
               <br />
@@ -158,7 +158,7 @@ const Page = () => {
         <div className="flex flex-col lg:flex-row items-center justify-between border-b border-b-[#B9B9B9] pb-16 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           {/* Text Content */}
           <div className="max-w-full lg:max-w-[500px] w-full mb-8 lg:mb-0 lg:mr-[100px]">
-            <h3 className="text-[28px] sm:text-[32px] lg:text-[40px] font-medium mb-2 leading-[40px]">MÀU CỦA CẢM XÚC TĨNH</h3>
+            <h3 className="text-[28px] sm:text-[24px] lg:text-[40px] font-medium mb-2 leading-[24px] lg:leading-[40px]">MÀU CỦA CẢM XÚC TĨNH</h3>
             <p className="text-sm sm:text-base lg:text-md">
               Beige không buồn. Đen không lạnh. Khi được đặt đúng chỗ, chúng gợi nên sự tĩnh tại rất thật. Nội thất cũng có thể dịu dàng, không cần lên tiếng.
             </p>

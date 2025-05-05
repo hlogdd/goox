@@ -18,30 +18,30 @@ const Page = () => {
       <div className="mb-6 clr-primary">
         <Banner />
 
-        <section className="w-full px-8 py-16">
+        <section className="w-full px-[0px] lg:px-8 pt-[32px] lg:py-16">
           <div className="section__container">
             {/* Phần đầu: tiêu đề bên trái - mô tả bên phải */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-4 lg:mb-12">
               {/* Cột trái */}
               <div className="space-y-6" data-aos="fade-right">
                 <p className="text-sm font-medium text-gray-500 uppercase m-0">Tổng quan dự án</p>
-                <h1 className="text-3xl md:text-[56px] font-medium text-gray-900 leading-tight md:leading-[56px]" >
+                <h1 className="text-[36px] md:text-[56px] font-medium text-gray-900 leading-tight md:leading-[56px]" >
                   MIPEC DUPLEX <br /> PENTHOUSE
                 </h1>
                 <div className="flex gap-8 text-sm text-gray-700">
                   <div>
-                    <p className="font-normal clr-primary">Thi công và thiết kế</p>
-                    <p>GOOX</p>
+                    <p className="text-sm font-normal clr-primary">Thi công và thiết kế</p>
+                    <p className="text-md font-bold text-[#0F2927]">GOOX</p>
                   </div>
                   <div>
-                    <p className="font-medium">Năm</p>
-                    <p>2024</p>
+                    <p className="text-sm font-normal clr-primary">Năm</p>
+                    <p className="text-md font-bold text-[#0F2927]">2024</p>
                   </div>
                 </div>
               </div>
 
               {/* Cột phải */}
-              <div className="text-gray-700 text-base leading-relaxed" data-aos="fade-left" data-aos-delay="200">
+              <div className="text-md " data-aos="fade-left" data-aos-delay="200">
                 <p>Căn biệt thự Ánh Sáng là tổ ấm của một gia đình trẻ yêu sự tinh tế, tối giản nhưng không kém phần ấm cúng.</p>
                 <p className="mt-4">
                   Dự án là hành trình chuyển hóa một không gian cũ kỹ thành nơi chốn đầy cảm hứng, nơi ánh sáng, vật liệu tự nhiên và kiến trúc nội thất hòa quyện trong một nhịp sống mới.
@@ -65,13 +65,13 @@ const Page = () => {
         <section>
           <div className="section__container">
             {/* Phần đầu: Grid 2 cột */}
-            <div className="flex justify-center gap-8 gap-[56px] lg:gap-[240px] md:gap-[32px] py-12 lg:py-[58px] md:py-[28px] px-0 lg:px-[100px] md:px-[0px]">
+            <div className="flex flex-col lg:flex-row justify-center gap-8 gap-[16px] lg:gap-[56px] lg:gap-[240px] md:gap-[32px] py-4 lg:py-12 lg:py-[58px] md:py-[28px] px-0 lg:px-[100px] md:px-[0px]">
               <div 
                 className="item flex flex-col gap-4 max-w-[400px] mt-6 md:mt-[86px]" 
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
-                <div className="h-[450px] relative">
+                <div className="h-[320px] lg:h-[450px] relative">
                   <Image src={"/projects/project_2.png"} fill alt="img" />
                 </div>
                 <p>Không gian tiếp khách được mở rộng hoàn toàn về phía vườn sau với hệ cửa kính toàn khung, nơi ánh sáng tràn ngập từ sáng sớm đến cuối ngày.</p>
@@ -82,7 +82,7 @@ const Page = () => {
                 data-aos="fade-up"
                 data-aos-delay="400"
               >
-                <div className="h-[450px] relative">
+                <div className="h-[320px] lg:h-[450px] relative">
                   <Image src={"/projects/project_3.png"} fill alt="img" />
                 </div>
                 <p>Khu bếp nối liền phòng ăn là nơi phản chiếu đúng tinh thần &quot;ít mà chất&quot;. Tủ bếp làm từ gỗ sồi sơn mờ, mặt đá trắng vân mây và hệ đèn thả ánh vàng ấm</p>
@@ -117,13 +117,13 @@ const Page = () => {
 
             {/* Phần Grid 2 cột khác */}
             <div className="flex flex-wrap mb-[30px]">
-              <div className="flex justify-center gap-8 gap-[56px] lg:gap-[240px] md:gap-[32px] py-12 lg:py-[58px] md:py-[28px] w-full px-0 lg:px-[100px] md:px-[0px]">
+              <div className="flex flex-wrap justify-center gap-8 gap-[16px] lg:gap-[56px] lg:gap-[240px] md:gap-[32px] py-4 lg:py-12 lg:py-[58px] md:py-[28px] w-full px-0 lg:px-[100px] md:px-[0px]">
                 <div 
                   className="item flex flex-col gap-4 w-full max-w-[400px] mt-6 md:mt-[86px]" 
                   data-aos="zoom-in"
                   data-aos-delay="200"
                 >
-                  <div className="h-[450px] relative">
+                  <div className="h-[320px] lg:h-[450px] relative">
                     <Image src={"/projects/project_2.png"} fill alt="img" />
                   </div>
                 </div>
@@ -133,7 +133,7 @@ const Page = () => {
                   data-aos="zoom-in"
                   data-aos-delay="400"
                 >
-                  <div className="h-[450px] relative">
+                  <div className="h-[320px] lg:h-[450px] relative">
                     <Image src={"/projects/project_3.png"} fill alt="img" />
                   </div>
                   <p>
