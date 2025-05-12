@@ -1,6 +1,7 @@
 /** @format */
 
 import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 interface ProductHighlightProps {
   image: string;
@@ -17,6 +18,7 @@ export default function ProductHighlight({
   reverse = false,
   ctaText = "XEM BỘ SƯU TẬP",
 }: ProductHighlightProps) {
+  const router = useRouter();
   return (
     <section className="w-full pb-6 sm:pb-8 md:pb-12">
       <div
@@ -34,10 +36,10 @@ export default function ProductHighlight({
             priority
           />
         </div>
-        <div className="md:w-full max-w-full px-6 text-left lg:max-w-[425px] space-y-2 lg:space-y-4 lg:text-left md:text-left">
-          <h2 className="text-[32px] lg:text-[56px] leading-[32px] lg:leading-[65px] font-medium">{title}</h2>
+        <div className="md:w-full max-w-full px-6 text-left lg:max-w-[475px] space-y-2 lg:space-y-4 lg:text-left md:text-left">
+          <h2 className="text-[36px] md:text-[42px] lg:text-[56px] leading-[42px] md:leading-[52px] lg:leading-[65px] font-medium">{title}</h2>
           <p className="text-gray-600 text-sm sm:text-base">{description}</p>
-          <button className="mt-4 px-5 py-3 flex items-center gap-2 bg-primary text-white !font-bold transition-all">
+          <button className="mt-4 px-5 py-3 flex items-center gap-2 bg-primary text-white !font-bold transition-all" onClick={() => router.push('/product-detail')}>
             {ctaText}
             <Image src={"/product/icon_arrow_up.svg"} width={20} height={20} alt="icon"/>
           </button>

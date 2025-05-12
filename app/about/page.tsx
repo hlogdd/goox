@@ -101,7 +101,11 @@ const Page = () => {
         </div>
       </div>
 
-      <ContactHome />
+      <section className="section h-screen bg-[#EEEBE5] ">
+        <div className="section__container h-full flex items-center">
+          <ContactHome />
+        </div>
+      </section>
     </div>
   );
 };

@@ -15,7 +15,7 @@ const Page = () => {
 
   return (
     <AOSProvider>
-      <div className="mb-6 clr-primary">
+      <div className="mb-6 clr-primary overflow-x-hidden">
         <Banner />
 
         <section className="w-full px-[0px] lg:px-8 pt-[32px] lg:py-16">
@@ -50,12 +50,11 @@ const Page = () => {
             </div>
 
             {/* Ảnh bên dưới */}
-            <div className="w-full overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+            <div className="w-full overflow-hidden max-w-[1600px] h-[450px] lg:h-[900px] relative" data-aos="fade-up" data-aos-delay="300">
               <Image
                 src="/projects/project_1.png"
                 alt="Kitchen"
-                width={1600}
-                height={900}
+                fill
                 className="w-full h-auto object-cover"
               />
             </div>
@@ -67,7 +66,7 @@ const Page = () => {
             {/* Phần đầu: Grid 2 cột */}
             <div className="flex flex-col lg:flex-row justify-center gap-8 gap-[16px] lg:gap-[56px] lg:gap-[240px] md:gap-[32px] py-4 lg:py-12 lg:py-[58px] md:py-[28px] px-0 lg:px-[100px] md:px-[0px]">
               <div 
-                className="item flex flex-col gap-4 max-w-[400px] mt-6 md:mt-[86px]" 
+                className="item flex flex-col gap-4 max-w-[400px] mt-0 lg:mt-[86px]" 
                 data-aos="fade-up"
                 data-aos-delay="200"
               >
@@ -90,7 +89,7 @@ const Page = () => {
             </div>
 
             {/* Ảnh bên dưới */}
-            <div className="flex flex-wrap mb-[30px]" data-aos="fade-up">
+            <div className="flex flex-wrap mb-[12px] lg:mb-[30px]" data-aos="fade-up">
               <div className="flex-1 w-full min-h-[600px] relative">
                 <Image src={"/projects/project_5.png"} layout="fill" objectFit="cover" alt="img" />
               </div>
@@ -116,10 +115,10 @@ const Page = () => {
             </div>
 
             {/* Phần Grid 2 cột khác */}
-            <div className="flex flex-wrap mb-[30px]">
-              <div className="flex flex-wrap justify-center gap-8 gap-[16px] lg:gap-[56px] lg:gap-[240px] md:gap-[32px] py-4 lg:py-12 lg:py-[58px] md:py-[28px] w-full px-0 lg:px-[100px] md:px-[0px]">
+            <div className="flex flex-wrap mb-[12px] lg:mb-[30px]">
+              <div className="flex flex-wrap justify-center gap-8 gap-[16px] lg:gap-[56px] lg:gap-[240px] md:gap-[32px] py-0 lg:py-4 lg:py-12 lg:py-[58px] md:py-[28px] w-full px-0 lg:px-[100px] md:px-[0px]">
                 <div 
-                  className="item flex flex-col gap-4 w-full max-w-[400px] mt-6 md:mt-[86px]" 
+                  className="item flex flex-col gap-4 w-full max-w-[400px] mt-0 md:mt-[86px]" 
                   data-aos="zoom-in"
                   data-aos-delay="200"
                 >
@@ -146,7 +145,7 @@ const Page = () => {
 
             {/* Ảnh cuối */}
             <div 
-              className="flex flex-wrap mb-[30px]" 
+              className="flex flex-wrap mb-[12px] lg:mb-[30px]" 
               data-aos="fade-up"
               data-aos-anchor-placement="top-bottom"
             >
@@ -157,7 +156,11 @@ const Page = () => {
           </div>
         </section>
 
-        <ContactHome />
+        <section className="section h-screen bg-[#EEEBE5] ">
+        <div className="section__container h-full flex items-center">
+          <ContactHome />
+        </div>
+      </section>
       </div>
     </AOSProvider>
   );

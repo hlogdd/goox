@@ -22,9 +22,11 @@ const Page = () => {
   }, []);
 
   return (
-    <div className="section pt-10">
-      <ContactHome />
-    </div>
+    <section className="section h-screen bg-[#EEEBE5] ">
+        <div className="section__container h-full flex items-center flex items-center">
+          <ContactHome />
+        </div>
+      </section>
   );
 };
 

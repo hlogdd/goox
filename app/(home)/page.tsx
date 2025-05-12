@@ -133,9 +133,9 @@ export default function Page() {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ duration: 0.4 }}
                     viewport={{ once: true }}
-                    className="flex flex-col lg:flex-row  md:flex-col items-start md:items-center justify-between gap-8">
+                    className="flex flex-col lg:flex-row  md:flex-col items-start lg:items-center justify-between gap-8">
                     <h2
-                      className="leading-[40px] md:leading-[35px] lg:leading-[55px] uppercase text-[32px] md:text-3xl lg:text-[48px] font-medium 2xl:max-w-[30%] xl:max-w-[45%] lg:max-w-[55%] md:max-w-[100%]"
+                      className="leading-[42px] md:leading-[52px] lg:leading-[66px] uppercase text-[36px] md:text-[42px] lg:text-[56px] font-medium 2xl:max-w-[30%] xl:max-w-[45%] lg:max-w-[55%] md:max-w-[100%]"
                      >
                       Chúng tôi đã tạo ra hơn 700 thiết kế nội thất gỗ độc bản
                     </h2>
@@ -197,7 +197,7 @@ export default function Page() {
                       </div>
                     </div>
                     <div className="flex flex-col max-w-[420px] w-full">
-                      <h3 className="text-[24px] sm:text-[28px] md:text-[36px] font-medium uppercase">Xưởng sản xuất riêng</h3>
+                      <h3 className="text-[24px] sm:text-[28px] md:text-[36px] font-medium uppercase leading-[32px] md:leading-[42px] lg:leading-[48px]">Xưởng sản xuất riêng</h3>
                       <p className="text-md font-normal">Chúng tôi cam kết đảm bảo chất lượng từ nguyên liệu đến thành phẩm.</p>
                     </div>
                   </motion.div>
@@ -216,7 +216,7 @@ export default function Page() {
                       </div>
                     </div>
                     <div className="flex flex-col max-w-[420px] w-full">
-                      <h3 className="text-[24px] sm:text-[28px] md:text-[36px] font-medium uppercase">Vật liệu cao cấp</h3>
+                      <h3 className="text-[24px] sm:text-[28px] md:text-[36px] font-medium uppercase leading-[32px] md:leading-[42px] lg:leading-[48px]">Vật liệu cao cấp</h3>
                       <p className="text-md font-normal">Gỗ tự nhiên, gỗ công nghiệp xử lý chống cong vênh, mối mọt. Sản phẩm được bền đẹp theo thời gian</p>
                     </div>
                   </motion.div>
@@ -235,7 +235,7 @@ export default function Page() {
                       </div>
                     </div>
                     <div className="flex flex-col max-w-[420px] w-full">
-                      <h3 className="text-[24px] sm:text-[28px] md:text-[36px] font-medium uppercase">ĐỘI NGŨ THỢ với TAY NGHỀ CAO</h3>
+                      <h3 className="text-[24px] sm:text-[28px] md:text-[36px] font-medium uppercase leading-[32px] md:leading-[42px] lg:leading-[48px]">ĐỘI NGŨ THỢ với TAY NGHỀ CAO</h3>
                       <p className="text-md font-normal">
                         Đội ngũ thi công của Goox có nhiều năm kinh nghiệm, thi công thủ công tỉ mỉ, kết hợp với máy móc hiện đại để đảm bảo độ chính xác và thẩm mỹ cho từng dự án
                       </p>
@@ -263,7 +263,7 @@ export default function Page() {
               </div>
 
               <div className="section h-screen bg-[#EEEBE5]">
-              <div className="section__container">
+              <div className="section__container h-full flex items-center">
               <ContactHome />
                 </div>
               </div>

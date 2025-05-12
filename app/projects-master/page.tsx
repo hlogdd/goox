@@ -1,3 +1,5 @@
+/** @format */
+
 "use client";
 
 import { useRef, useState, useEffect } from "react";
@@ -92,28 +94,23 @@ export default function VerticalImageSlider() {
       <div className="section__container mx-auto px-4 h-full">
         <div className="flex lg:flex-row gap-8 h-full">
           {/* Left side */}
-          <div className="w-full max-w-[110px] md:max-w-[220px] lg:max-w-[400px] h-full flex flex-col pb-12">
-            <div className="flex-1 flex flex-col justify-center">
-              <h2 className="text-[16px] md:text-[28px] lg:text-[56px] leading-[16px] lg:leading-[56px] font-medium">
-                {slides[activeSlideIndex]?.description || ""}
-              </h2>
-            </div>
+          <div className="w-full max-w-[110px] md:max-w-[220px] lg:max-w-[400px] h-full flex flex-col">
+            <div className="flex-1 flex flex-col justify-center relative">
+              <h2 className="text-[24px] md:text-[28px] lg:text-[56px] leading-[28px] lg:leading-[56px] font-medium ">{slides[activeSlideIndex]?.description || ""}</h2>
 
-            {/* Pagination buttons */}
-            <div className="flex flex-col gap-2">
-              {projects.map((project, index) => (
-                <button
-                  key={project.key}
-                  className={`px-4 text-left text-md transition-all ${
-                    index === activeProjectIndex ? "text-[#0F2927] font-medium" : "text-[#939D9C]"
-                  }`}
-                  onClick={() => {
-                    setActiveProjectIndex(index);
-                  }}
-                >
-                  {project.title}
-                </button>
-              ))}
+              {/* Pagination buttons */}
+              <div className="flex flex-col gap-2 absolute bottom-[32px]">
+                {projects.map((project, index) => (
+                  <button
+                    key={project.key}
+                    className={`px-4 text-left text-md transition-all ${index === activeProjectIndex ? "text-[#0F2927] font-medium" : "text-[#939D9C]"}`}
+                    onClick={() => {
+                      setActiveProjectIndex(index);
+                    }}>
+                    {project.title}
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
 
@@ -139,8 +136,7 @@ export default function VerticalImageSlider() {
               centeredSlides
               loop
               onSlideChange={handleSlideChange}
-              className="h-full"
-            >
+              className="h-full">
               {slides.map((slide, index) => (
                 <SwiperSlide key={`${slide.id}-${index}`}>
                   <Link href="/projects">
@@ -149,9 +145,7 @@ export default function VerticalImageSlider() {
                         src={slide.image}
                         fill
                         alt={slide.description}
-                        className={`object-cover transition-all duration-300 ${
-                          index === activeSlideIndex ? "scale-100" : "scale-75"
-                        }`}
+                        className={`object-cover transition-all duration-300 ${index === activeSlideIndex ? "scale-100" : "scale-85 lg:scale-75"}`}
                         priority={index === activeSlideIndex}
                       />
                     </div>

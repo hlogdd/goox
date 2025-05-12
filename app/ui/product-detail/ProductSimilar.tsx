@@ -23,7 +23,8 @@ const productData = [
 export default function ProductSimilar() {
   return (
     <div className="py-6 mt-12">
-      <h2 className="text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] font-medium uppercase text-center mb-[40px] text-[#061D1B]">Danh mục sản phẩm</h2>
+      <h2 className="text-[36px] md:text-[42px] lg:text-[56px] font-medium uppercase text-center mb-[40px] text-[#061D1B]">Danh mục sản phẩm</h2>
+
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={16}
@@ -32,12 +33,14 @@ export default function ProductSimilar() {
         autoplay={{ delay: 3000 }}
         breakpoints={{
           0: { slidesPerView: 1.2 },
-          480: { slidesPerView: 3.2 },
-          640: { slidesPerView: 3.5 },
-          768: { slidesPerView: 4.2 },
-          1024: { slidesPerView: 4.5 },
-          1280: { slidesPerView: 5.5 },
-          1536: { slidesPerView: 6 },
+          480: { slidesPerView: 2.2 },
+          640: { slidesPerView: 2.5 },
+          768: { slidesPerView: 3 },
+          1024: { slidesPerView: 3.2 },
+          1280: { slidesPerView: 3.5 },
+          1536: { slidesPerView: 4 },
+          1600: { slidesPerView: 5 },
+          1920: { slidesPerView: 5.5 },
         }}
         className="w-full">
         {productData.map((item, index) => (

@@ -24,7 +24,7 @@ const Page = () => {
 
   return (
     <AOSProvider>
-      <div className="max-w-[1240px] mx-auto mt-[80px] px-[32px] lg:px-0">
+      <div className="max-w-[1240px] mx-auto mt-[80px] px-[16px] lg:px-0">
         <section className="mb-[32px] lg:mb-[56px] md:mb-[40px]">
           <div className="mx-auto max-w-[1240px]">
             {/* Breadcrumb */}
@@ -33,16 +33,16 @@ const Page = () => {
             </div>
 
             {/* Tiêu đề + mô tả */}
-            <h2 className="text-[28px] md:text-[40px] font-medium leading-[28px] lg:leading-[24px] lg:leading-[40px] max-w-[600px]">PHONG CÁCH THIẾT KẾ NỘI THẤT SANG XỊN MỊN NHẤT NĂM 2025</h2>
+            <h2 className="text-[32px] md:text-[40px] font-medium leading-[34px] md:leading-[42px] lg:leading-[40px] max-w-[600px]">PHONG CÁCH THIẾT KẾ NỘI THẤT SANG XỊN MỊN NHẤT NĂM 2025</h2>
             <p className="text-sm">16/06/2025</p>
           </div>
         </section>
 
-        <div className="flex lg:flex-row gap-8 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
+        <div className="flex lg:flex-row gap-8 mb-[8px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           {/* Left nội dung */}
           <div className="w-full lg:w-[70%] flex flex-col">
             <div className="flex flex-col lg:flex-row mb-4 gap-4">
-              <h3 className="text-[36px] md:text-[46px] lg:text-[56px] leading-[24px] lg:leading-[40px] lg:leading-[56px] flex-1">
+              <h3 className="text-[24px] md:text-[46px] lg:text-[56px] leading-[28px] lg:leading-[40px] lg:leading-[56px] flex-1">
                 STORYTELLING <br /> ORGANICMODERN
               </h3>
 
@@ -55,7 +55,7 @@ const Page = () => {
               <Image src={"/blogs/blog_detail_02.png"} fill alt="img" className="object-cover" />
             </div>
 
-            <h3 className="text-[36px] lg:text-[56px] leading-[24px] lg:leading-[40px] lg:leading-[56px] mt-4 uppercase">
+            <h3 className="text-[24px] lg:text-[56px] leading-[28px] lg:leading-[40px] lg:leading-[56px] mt-4 uppercase">
               ELEVATED SIMPLICITY <br /> Architectural furniture
             </h3>
           </div>
@@ -68,9 +68,9 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="flex items-center justify-between border-b border-b-[#B9B9B9] pb-16 flex-col lg:flex-row mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
-          <div className="max-w-full lg:max-w-[500px] w-full mb-8 lg:mb-0 lg:mr-[100px]">
-            <h3 className="text-[24px] sm:text-[40px] font-bold mb-2 leading-[24px] lg:leading-[40px]">
+        <div className="flex items-center justify-between border-b border-b-[#B9B9B9] pb-6 lg:pb-16 flex-col lg:flex-row mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
+          <div className="max-w-full lg:max-w-[500px] w-full mb-2 lg:mb-8 lg:mb-0 lg:mr-[100px]">
+            <h3 className="text-[26px] sm:text-[40px] font-bold mb-2 leading-[24px] lg:leading-[40px]">
               Gỗ organic & <br />
               những bề mặt thô mộc
             </h3>
@@ -84,7 +84,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between border-b border-b-[#B9B9B9] pb-16 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
+        <div className="flex flex-col lg:flex-row items-center justify-between border-b border-b-[#B9B9B9] pb-6 lg:pb-16 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           {/* Left Section */}
           <div className="max-w-full lg:max-w-[500px] w-full lg:mr-[100px] mb-[24px]">
             <h3 className="text-[24px] sm:text-[40px] font-bold mb-2 leading-[28px] lg:leading-[46px] uppercase">
@@ -103,9 +103,9 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-between border-b border-b-[#B9B9B9] pb-16 mb-[60px]" data-aos="fade-up" data-aos-duration="1000">
+        <div className="flex flex-col justify-between border-b border-b-[#B9B9B9] pb-6 lg:pb-16 mb-[60px]" data-aos="fade-up" data-aos-duration="1000">
           {/* Section with Title and Text */}
-          <div className="flex flex-col lg:flex-row items-start sm:items-center justify-between w-full mb-[40px]">
+          <div className="flex flex-col lg:flex-row items-start sm:items-center justify-between w-full mb-[16px] lg:mb-[40px]">
             <h3 className="text-[24px] sm:text-[40px] font-bold mb-2 leading-[28px] lg:leading-[46px] sm:mr-4 max-w-full lg:max-w-[500px]">TỐI GIẢN, NHƯNG KHÔNG RỖNG TUẾCH</h3>
 
             <p className="text-base sm:text-md max-w-full lg:max-w-[400px] flex-1">
@@ -123,7 +123,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="border-b border-[#B9B9B9] pt-16 pb-[100px] mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
+        <div className="border-b border-[#B9B9B9] pt-4 lg:pt-16 pb-[56px] lg:pb-[100px] mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           <div className="max-w-[1058px] mx-auto flex items-center justify-center relative h-[524px] px-4 relative">
             {/* Text bên trái */}
             <h3 className="absolute top-0 lg:top-1/2 -translate-y-1/2 left-0 text-[24px] sm:text-[40px] font-medium leading-[28px] lg:leading-[46px] max-w-[420px] z-11">
@@ -135,7 +135,7 @@ const Page = () => {
             {/* Khối hình ảnh */}
             <div className="relative w-[412px] h-[524px]">
               {/* Layer background - z-0 */}
-              <div className="absolute top-1/2 -translate-1/2 left-1/2 inset-0 z-0 w-[628px] h-[612px]">
+              <div className="absolute top-1/2 -translate-1/2 left-1/2 inset-0 z-0 max-w-full lg:max-w-[628px] w-[full] h-[612px]">
                 <Image src="/blogs/blog_layer_bg.png" alt="background" fill className="object-cover" />
               </div>
 
@@ -155,9 +155,9 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row items-center justify-between border-b border-b-[#B9B9B9] pb-16 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
+        <div className="flex flex-col lg:flex-row items-center justify-between border-b border-b-[#B9B9B9] pb-6 lg:pb-16 mb-[32px] lg:mb-[100px] md:mb-[48px]" data-aos="fade-up" data-aos-duration="1000">
           {/* Text Content */}
-          <div className="max-w-full lg:max-w-[500px] w-full mb-8 lg:mb-0 lg:mr-[100px]">
+          <div className="max-w-full lg:max-w-[500px] w-full mb-2 lg:mb-8 lg:mb-0 lg:mr-[100px]">
             <h3 className="text-[28px] sm:text-[24px] lg:text-[40px] font-medium mb-2 leading-[24px] lg:leading-[40px]">MÀU CỦA CẢM XÚC TĨNH</h3>
             <p className="text-sm sm:text-base lg:text-md">
               Beige không buồn. Đen không lạnh. Khi được đặt đúng chỗ, chúng gợi nên sự tĩnh tại rất thật. Nội thất cũng có thể dịu dàng, không cần lên tiếng.
@@ -171,7 +171,7 @@ const Page = () => {
           </div>
         </div>
 
-        <div className="max-w-[1440px] mx-auto pb-16 mb-8" data-aos="fade-up" data-aos-duration="1000">
+        <div className="max-w-[1440px] mx-auto pb-6 lg:pb-16 mb-8" data-aos="fade-up" data-aos-duration="1000">
           <div className="flex justify-between items-center mb-2">
             <h2 className="text-3xl sm:text-[56px] font-bold">BÀI VIẾT</h2>
             <a href="#" className="text-base font-medium flex items-center gap-2">
@@ -209,11 +209,11 @@ const Page = () => {
           </div>
         </div>
       </div>
-      <div className="section bg-[#EEEBE5]">
-        <div className="max-w-[1240px] mx-auto">
+      <section className="section h-screen bg-[#EEEBE5] ">
+        <div className="section__container h-full flex items-center">
           <ContactHome />
         </div>
-      </div>
+      </section>
     </AOSProvider>
   );
 };

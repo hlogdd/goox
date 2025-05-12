@@ -54,20 +54,20 @@ export default function ProductSlider({ title, products }: Props) {
 
   return (
     <section className="pl-[32px] lg:pl-[100px] mb-[56px] lg:mb-[100px]">
-      <h2 className="text-2xl md:text-[32px] font-medium mb-6">{title}</h2>
+      <h2 className="text-[24px] md:text-[28px] lg:text-[32px] font-medium mb-6">{title}</h2>
 
       <Swiper
         modules={[Navigation]}
-        spaceBetween={10}
+        spaceBetween={20}
         slidesPerView={1.2}
         breakpoints={{
-          640: { slidesPerView: 2.2 },
-          768: { slidesPerView: 3.2 },
-          1024: { slidesPerView: 4.2 },
+          640: { slidesPerView: 3 },
+          768: { slidesPerView: 4 },
+          1024: { slidesPerView: 4.5 },
           1224: { slidesPerView: 5.2 },
-          1536: { slidesPerView: 6.2 },
-          1780: { slidesPerView: 7.2 },
-          1920: { slidesPerView: 8.2 },
+          1536: { slidesPerView: 5.5 },
+          1780: { slidesPerView: 6.2 },
+          1920: { slidesPerView: 6.5 },
         }}
         navigation
         onSwiper={(swiper) => {
@@ -79,7 +79,7 @@ export default function ProductSlider({ title, products }: Props) {
         {products.map((product) => (
           <SwiperSlide key={product.id}>
             <div className="border-transparent hover:border-blue-400 transition">
-              <Link href="/product-detail" className="flex max-w-[288px] h-[350px] relative">
+              <Link href="/product-detail" className="flex max-w-full lg:max-w-[288px] h-[350px] relative">
                 <Image src={product.image} alt={product.name} fill className="object-cover" />
               </Link>
               <p className="text-center mt-2 text-md font-medium text-[#414141]">{product.name}</p>

@@ -15,7 +15,7 @@ export const metadata = {
   title: "Goox - Nội thất hiện đại",
   description: "Khám phá bộ sưu tập nội thất đậm chất riêng",
   icons: {
-    icon: "/favicon.ico",
+    icon: "/favicon.svg",
   },
 };
 

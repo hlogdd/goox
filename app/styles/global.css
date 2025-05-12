@@ -84,6 +84,11 @@ table {
 p {
   color: #414141;
 }
+@media (max-width: 768px) {
+  p {
+    font-size: 13px;
+  }
+}
 
 /** @format */
 :root {
@@ -127,7 +132,6 @@ p {
     padding-right: 32px;
   }
 }
-
 @media (min-width: 1280px) {
   .section__container {
     padding-left: 104px;

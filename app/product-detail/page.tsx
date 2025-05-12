@@ -6,8 +6,11 @@ import React, { useEffect } from "react";
 import ContactHome from "../ui/homepage/ContactHome";
 import { removeInlineStylesFromMain } from "../lib/function";
 import ProductSimilar from "../ui/product-detail/ProductSimilar";
+import { useRouter } from "next/navigation";
 
 const Page = () => {
+  const router = useRouter();
+
   const thumbnails = ["/product/product_detail_2.png", "/product/product_detail_3.png", "/product/product_detail_4.png"];
 
   const colors = ["#F0AB5E", "#96908B", "#69778E", "#6E724C", "#274156"];
@@ -47,7 +50,7 @@ const Page = () => {
 
           {/* Bên phải: nội dung chi tiết */}
           <div className="flex flex-col justify-start max-w-[350px] lg:max-w-full w-full">
-            <h2 className="text-[28px] font-medium uppercase mb-1">GOOX Low Platform Bed</h2>
+            <h2 className="text-[24px] md:text-[28px] lg:text-[36px] font-medium uppercase mb-1">GOOX Low Platform Bed</h2>
             <p className="text-[#323232] leading-[24px] text-md mb-2">Tông gỗ tự nhiên ấm, giữ nguyên sắc gỗ và vân thật. Có thể lựa chọn giữa sồi sáng, óc chó nâu trầm hoặc phủ dầu xám khói.</p>
 
             {/* Màu sắc */}
@@ -73,7 +76,7 @@ const Page = () => {
             </div>
 
             {/* Nút liên hệ */}
-            <button className="uppercase py-3 px-6 w-fit mt-4 transition-all bg-primary text-white !font-medium flex items-center gap-2">
+            <button className="uppercase py-3 px-6 w-fit mt-4 transition-all bg-primary text-white !font-medium flex items-center gap-2" onClick={() => router.push('/contact')}>
               Liên hệ ngay
               <Image src={"/product/icon_arrow_up.svg"} width={20} height={20} alt="icon" />
             </button>
@@ -86,7 +89,12 @@ const Page = () => {
           <ProductSimilar />
         </div>
       </div>
-      <ContactHome />
+
+      <section className="section h-screen bg-[#EEEBE5] ">
+        <div className="section__container h-full flex items-center">
+          <ContactHome />
+        </div>
+      </section>
     </div>
   );
 };

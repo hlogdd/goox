@@ -105,8 +105,11 @@ export default function Page() {
           { id: 8, name: "Giường bệt Nhật Bản", image: "/product/product-high-3.png" },
         ]}
       />
-
-      <ContactHome />
+      <section className="section h-screen bg-[#EEEBE5] ">
+        <div className="section__container h-full flex items-center">
+          <ContactHome />
+        </div>
+      </section>
     </div>
   );
 }

@@ -6,17 +6,17 @@ import React from "react";
 
 const ContactHome = () => {
   return (
-    <div className="relative bg-[#EEEBE5] py-[80px]">
+    <div className="relative bg-[#EEEBE5] p-0 lg:py-[80px] w-full">
       <div className="relative">
       <div className="absolute hidden lg:block top-0 right-10 bottom-0 w-1/2 z-0 pointer-events-none">
         <Image src="/home/homepage_contact_bg.png" alt="Background" fill className="object-contain" />
       </div>
 
       {/* Content chính */}
-      <div className="flex flex-col md:flex-row gap-12 py-0 px-[32px] lg:px-6 md:px-6 relative z-10">
+      <div className="flex flex-col md:flex-row gap-12 py-0 px-[0px] lg:px-6 md:px-6 relative z-10">
         {/* Form bên trái */}
         <div className="flex-1">
-          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-medium mb-8 uppercase leading-[1.1] max-w-[400px]">Let&apos;s work together</h2>
+          <h2 className="text-[36px] sm:text-[42px] md:text-[56px] font-medium mb-8 uppercase leading-[1.1] max-w-full md:max-w-full lg:max-w-[400px]">Let&apos;s work together</h2>
 
           <form className="grid grid-cols-1 gap-6">
             {/* Họ tên */}

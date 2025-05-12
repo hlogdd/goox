@@ -83,8 +83,8 @@ const Page = () => {
         </div>
 
         {/* Tiêu đề + mô tả */}
-        <h2 className="text-[56px] font-bold mb-2">BLOG</h2>
-        <p className="text-[#141414] mb-8 max-w-3xl">Nơi chúng tôi lưu giữ và chia sẻ những cảm hứng sống tinh tế, từ chất liệu gỗ tự nhiên đến những xu hướng thiết kế đương đại.</p>
+        <h2 className="text-[32px] lg:text-[56px] font-bold mb-2">BLOG</h2>
+        <p className="text-[#141414] mb-2 lg:mb-8 max-w-3xl">Nơi chúng tôi lưu giữ và chia sẻ những cảm hứng sống tinh tế, từ chất liệu gỗ tự nhiên đến những xu hướng thiết kế đương đại.</p>
 
         {/* Grid bài viết */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
